@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<style>
+		body{
+			overflow-x: hidden;
+		}
+		*:focus{
+			outline:none;
+		}
+		#nav{
+			width:100%;
+			height:100px;
+			background-color:white;
+			position: fixed;
+
+			z-index:9;
+		}
+		#North_logo{
+			margin-top: 10px;
+			margin-left:20px;
+			width:230px;
+			height:43px;
+			cursor: pointer;
+			/*position: absolute;*/
+		}
+		#navbarNavAltMarkup{
+			margin-left:25%;
+			font-size:21px;
+			font-family: calibri;
+			font-weight: 600;
+		}
+		.nav_link{
+			color:red;
+			text-decoration: none;
+			margin-right:18px;
+			transition-duration: 2s;
+		}
+		.nav_link:hover{
+			color:black;
+		}
+		#main_photo{
+			width:100%;
+			height:630px;
+			 background-image: url("images/pexels-startup-stock-photos-7070.jpg");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content:center;
+
+           /* align-items: center;*/
+		}
+		#search_main{
+			width:40%;
+			background-color: lightgrey;
+			border: none;
+			margin-top: 170px;
+			height:40px;
+			opacity: 0.5;
+		}
+		#search_main:visited{
+			background-color: 1;
+		}
+		#wrapper{
+			margin-top: 40px;
+			margin-bottom: 60px;
+
+		}
+		.wrapper{
+			box-sizing: border-box;
+			width:100%;
+			margin-top: 30px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+
+		}
+		#wrapper_heading{
+			font-size:35px;
+			font-weight: 500;
+			margin-left: 5%;
+			color:grey;
+			font-family: calibri;
+		}
+		#line_wrapper{
+			color: grey;
+			width:63%;
+			margin-left: 2%;
+			margin-top: 17px;
+			height: 3px;
+
+		}
+		.card{
+			width:300px;
+			height:350px;
+			padding:2rem 1rem;
+			position: relative;
+			display: flex;
+			align-items: flex-end;
+			box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+			transition: 0.5s ease-in-out;
+		}
+		.card:hover{
+			transform: translateY(2opx);
+			backdrop-filter: blur(10px);
+		}
+
+		.card:before{
+			content:"";
+			position: absolute;
+			top:0;
+			left:0;
+			display: block;
+			width:100%;
+			height:100px;
+			background: linear-gradient(to bottom, rgba(0,176,155,0,5),rgba(150,201,61,1));
+			z-index:2;
+			transition: 0.5s all;
+			opacity: 0;
+		}
+		.card:hover:before{
+			opacity: 1;
+		}
+		.card img{
+			width:100%;
+			height:100%;
+			object-fit:cover;
+			position: absolute;
+			top:0;
+			left:0;
+
+		}
+		.card .info{
+			position: relative;
+			z-index: 3;
+			color:#fff;
+			opacity: 0;
+			transform: translateY(30px);
+			transition: 0.5s all;
+
+		}
+		.card:hover .info{
+			opacity: 1;
+			transform: translateY(0px);
+		}
+		#elevate{
+			width:100%;
+			height:590px;
+			 background-image: url("images/pexels-pixabay-271743.jpg");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+		}
+		#elevate_box{
+			background-color: #fcad03;
+			font-family: calibri;
+			width:40%;
+			font-size:30px;
+			font-weight: bold;
+			height:160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+
+
+		}
+		#elevate_button{
+			color:white;
+			font-weight: 800;
+			font-size: 20px;
+			background-color: red;
+			border: none;
+			width:25%;
+		}
+		   #footer{
+            width:100%;
+            background-color: #f1f1f1;
+            height:60%;
+            display:flex;
+            font-family: calibri;
+            margin-top: -20px;
+        }
+        #first_footer{
+            width:40%;
+            margin-left: 80px;
+            margin-top: 25px;
+            margin:;
+            height:100%;
+        }
+        #second_footer{
+            margin-top: 25px;
+            margin-left: 30px;
+            width:30%;
+            height:100%;
+        }
+        .footer_button{
+            height:35px;
+            font-size: 15px;
+            font-weight:550;
+            color:#0c1027;
+            width:30%;
+            border-color: #0c1027;
+            background-color: white;
+            border-radius: 10px;
+            transition-duration: 1s;
+        }
+        .footer_button:hover{
+            background-color: #9c4668;
+            cursor: pointer;
+        }
+        .small_text_footer{
+            color:#9c4668;
+            font-family: calibri;
+        }
+        #contact_icons{
+            margin-top: 40px;
+            font-size: 20px;
+        }
+        #contact_icon{
+            margin-right: 15px;
+            color:#0c1027;
+            transition-duration: 1s;
+        }
+        #contact_icon:hover{
+            color:#9c4668;
+        }
+        .link_footer{
+            text-decoration: none;
+        }
+        @media screen and (max-width: 950px){
+            #footer_image{
+                display: none;
+            }
+            #footer_vakarien{
+                display: flex;
+            }
+            #first_footer{
+                width:100%;
+                margin-left: 15px;
+            }
+            #second_footer{
+                width:100%;
+                margin-left: 15px;
+                margin-top: 0px;
+            }
+            .small_text_footer{
+                margin-right: 10px;
+                margin-top: -19px;
+            }
+            #footer{
+                display: block;
+            }
+            .footer_button{
+                margin-top: -10px;
+            }
+
+        }
+		/*#slideshow_images{
+			width:100%;
+			position: absolute;
+			height:540px;
+		}
+		.main-carousel{
+			width:95%;
+			margin-left: 2%;
+		}*/
+	</style>
+	<title>Home</title>
+</head>
+<body>
+	<!-- header -->
+	<nav id="nav" class="navbar navbar-expand-lg navbar-light">
+	  <div class="container-fluid" >
+	    <img src="images/Northflex_logo.jpg" id="North_logo" href="#">
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	      <div class="navbar-nav">
+	        <a class="nav_link" href="#">HOME</a>
+	        <a class="nav_link" href="#">ABOUT US</a>
+	        <a class="nav_link" href="#">OUR PRODUCTS</a>
+	        <a class="nav_link" href="#">SUPPORT</a>
+	        <a class="nav_link" href="#">CONTACT US</a>
+	      </div>
+	    </div>
+	  </div>
+	</nav>
+	
+	<div id="main_photo">
+		<input type="text" id="search_main" placeholder="Search ">
+	</div>
+	<!-- new Launches -->
+	<div id="wrapper">
+		<div style="display: flex">
+			<h1 id="wrapper_heading">Our Products</h1>
+			<hr id="line_wrapper">
+		</div>
+		<div class="wrapper">
+			<div class="card">
+				<img src="images/adi-goldstein-E_8Zk_hfpcE-unsplash.jpg">
+				<div class="info">
+					<h1>Flexible Wire</h1>
+				</div>
+
+			</div> 
+
+			<div class="card">
+				<img src="images/mike-hindle-urTBnMtWWYc-unsplash.jpg">
+				<div class="info">
+					<h1>Flexible Wire</h1>
+				</div>
+
+			</div> 
+
+			<div class="card">
+				<img src="images/possessed-photography-YKW0JjP7rlU-unsplash.jpg">
+				<div class="info">
+					<h1>Flexible Wire</h1>
+				</div>
+
+			</div> 
+		</div>
+	</div>
+	<!--solution-->
+	<div id="elevate">
+		<div id="elevate_box">
+			<p> &nbsp &nbsp &nbsp &nbsp ELEVATE YOUR HOME<br>
+				WITH CUSTOMISED SOLUTIONS
+			</p>
+			<h4>GET EXPERT GUIDANCE</h4>
+			<button id="elevate_button"> ASK NOW</button>
+		</div>
+		
+	</div>
+
+	<!--footer-->
+    <div id="footer">
+        <div id="first_footer">
+            <h1 style="font-size: 35px;">We're here to help</h1>
+            <h4 style="color:#9c4668">Visit our Help Center for answers to common questions or contact us directly.</h4>
+            <a href="./feedback/index.html" ><button class="footer_button">Feedback</button></a>
+            <a href="Contact_support.html" ><button class="footer_button" style="margin-left: 20px">Contact Support</button></a>
+            <br>
+            <div style="display:inline-block">
+                <h1>Solution</h1>
+                <a href="Review_story.html" class="link_footer"><h4 class="small_text_footer">Reviews</h4></a>
+                <a href="resume_builder.html" class="link_footer"><h4 class="small_text_footer">Resume</h4></a>
+            </div>
+            <div style="display: inline-block;margin-left: 20px">
+                <h1>Resources</h1>
+                <a href="How_it_works.html" class="link_footer"><h4 class="small_text_footer">How it works</h4></a>
+                <a href="FAQ.html" class="link_footer"><h4 class="small_text_footer">FAQ</h4></a>
+            </div>
+        </div>
+        <div id="second_footer">
+           
+            <h1>Vakarien</h1>
+            <div id="footer_vakarien">
+                <a href="Open_jobs_Vakarien.html#job_heading" class="link_footer"><h4 class="small_text_footer">Why Vakarien</h4></a>
+                <a href="meet_founders.html" class="link_footer"><h4 class="small_text_footer">Meet The Founders</h4></a>
+                <a href="Failed.html" class="link_footer"><h4 class="small_text_footer">Cookies& privacy</h4></a>
+                </div>
+                <a href="Donate_us.html" ><button class="footer_button">Donate Us</button></a>
+           
+            <div id="contact_icons">
+                <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjlgeDorbzwAhVPDCsKHVF8BJIYABAAGgJzZg&ae=2&ohost=www.google.com&cid=CAESQOD2jimxu7s00ezwY1HM_qBD0C7yH-6Ezk32Mn55FpiS8HLHplRfnSTcs-DkW3zfUdKXhPzSWT5JIjTh7TRHTPY&sig=AOD64_2V5kLYi7mDRCGZIpV5Ww7Q2ntx7Q&q&adurl&ved=2ahUKEwidmtjorbzwAhW0heYKHZaRCQEQ0Qx6BAgGEAE" class="link_footer"><i  id="contact_icon" class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" class="link_footer"><i  id="contact_icon" class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/" class="link_footer"><i  id="contact_icon" class="fab fa-linkedin"></i></a>
+                <a href="https://www.apple.com/in/" class="link_footer"><i  id="contact_icon" class="fab fa-apple"></i></a>
+                <a href="https://twitter.com/?lang=en" class="link_footer"><i  id="contact_icon" class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div style="margin-left: -180px">
+            <img src="./images/footer_human.png" id="footer_image" >
+           
+        </div>
+
+    </div>
+	<!-- slideshow -->
+	<!-- <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true,"autoPlay":3000 ,"pageDots": false}'>
+		<img src="https://images.pexels.com/photos/2881232/pexels-photo-2881232.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" id="slideshow_images" class="carousel-cell" >
+		<img src="images/pexels-kateryna-babaieva-3361235.jpg" id="slideshow_images" class="carousel-cell">
+	</div>
+
+	<div i>
+	</div> -->
+</body>
+</html>
