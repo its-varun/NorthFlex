@@ -1,0 +1,70 @@
+#heroImage{
+    /* margin-top:100px; */
+    width:100vw;
+    height:100vh;
+     background-image: url("../WebsiteMaterial/images/img1.jpg");
+    background-attachment: fixed;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* display: flex;
+    justify-content:center; */
+}
+
+.heroContent{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    color: white;
+    width: 40vw;
+    margin-left: 30px;
+    padding-top: 130px;
+}
+.heroContent h1{
+    font-weight: bolder;
+}
+.heroContent p{
+    font-size: 20px;
+}
+
+/* About Page */
+.aboutContent{
+    margin-top:50px;
+    width: 90vw;
+    margin-left:auto;
+    margin-right:auto;
+}
+.aboutContent h1{
+    color: #dc2520;
+}
+.aboutContent p:nth-child(2){
+    font-size:35px;
+}
+.aboutContent p:nth-child(3){
+    font-size:20px;
+}
+
+/* About Directors */
+
+.Directors{
+    margin-top:70px;
+    width: 100vw;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: 0 0 20px 20px rgba(238, 238, 238, 0.8);
+    background-color: rgba(240, 240, 240, 0.8);
+    padding: 50px 100px 50px;
+}
+.Directors div{
+    display:flex;
+    margin-top: 30px;
+    
+}
+.aboutDirector{
+    font-size: 20px;
+    margin-left:30px;
+    width: 60vw;
+    margin-top:60px;
+}

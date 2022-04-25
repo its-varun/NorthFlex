@@ -1,6 +1,5 @@
 import React from 'react'
 import './Home.css'
-import Northflex_logo from "../WebsiteMaterial/images/Northflex_logo.jpg"
 import img2 from "../WebsiteMaterial/images/img2.jpg"
 import img3 from "../WebsiteMaterial/images/img3.jpg"
 import img4 from "../WebsiteMaterial/images/img4.jpg"
@@ -10,29 +9,14 @@ import longLasting from "../WebsiteMaterial/images/longLasting.png"
 import meter from "../WebsiteMaterial/images/meter.jpg"
 import Bottom from "./Bottom"
 import img6 from  "../WebsiteMaterial/images/img6.jpg"
+import Navbar from './Navbar'
 
 
 
 export default function Home() {
   return (
     <>
-    <nav id="nav" className="navbar navbar-expand-lg navbar-light">
-	  <div className="container-fluid" >
-	    <img src={Northflex_logo} id="North_logo" href="#" />
-	    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-	      <span className="navbar-toggler-icon"></span>
-	    </button>
-	    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-	      <div className="navbar-nav">
-	        <a className="nav_link" href="#">HOME</a>
-	        <a className="nav_link" href="#">ABOUT US</a>
-	        <a className="nav_link" href="#">OUR PRODUCTS</a>
-	        <a className="nav_link" href="#">SUPPORT</a>
-	        <a className="nav_link" href="#">CONTACT US</a>
-	      </div>
-	    </div>
-	  </div>
-	</nav>
+    <Navbar/>
 	
 	<div id="main_photo">
 		<input type="text" id="search_main" placeholder="Search " />
@@ -45,7 +29,7 @@ export default function Home() {
 		<hr id="line_northflex" />
 
 		<div id="intro_mid">
-			<img src={electrician} id="electrician" />
+			<img src={electrician} id="electrician" alt="..."/>
 			<p>
 				
 We introduce ourselves as leading manufacturer of electrical goods under brand name of NIROL. Garg Industries established in the year 2000, is a professional company having specialized in designing, manufacturing and marketing of electrical wires, cables, main switch gear, change over switches, Kit-Kat fuse, domestic and similar purpose switches and socket outlets and heating elements. Our mission is to go to extra mile in satisfying our customers has been instrumental in propelling the company to a premiership position in the niche market of QUALITY WIRES, CABLES & ELECTRIC ASSESSORIES for the domestic and industrial use.   Quality is the life of enterprise! Garg Industries always provide first class products to its sufficient customers and provide excellent service to co-operative clients with honestly and eco friendly nature.
@@ -61,7 +45,7 @@ We introduce ourselves as leading manufacturer of electrical goods under brand n
 		</div>
 		<div className="wrapper">
 			<div className="card">
-				<img src={img2} />
+				<img src={img2} alt="..."/>
 				<div className="info">
 					<h1>Flexible Wire</h1>
 				</div>
@@ -69,7 +53,7 @@ We introduce ourselves as leading manufacturer of electrical goods under brand n
 			</div> 
 
 			<div className="card">
-				<img src={img3}/>
+				<img src={img3} alt="..."/>
 				<div className="info">
 					<h1>Flexible Wire</h1>
 				</div>
@@ -77,7 +61,7 @@ We introduce ourselves as leading manufacturer of electrical goods under brand n
 			</div> 
 
 			<div className="card">
-				<img src={img4} />
+				<img src={img4} alt="..."/>
 				<div className="info">
 					<h1>Flexible Wire</h1>
 				</div>
@@ -105,7 +89,7 @@ We introduce ourselves as leading manufacturer of electrical goods under brand n
 	<div id="advantages">
 		<div className='cards'>
 			<div className="imgBx">
-				<img src={fire} id="img"/>
+				<img src={fire} id="img" alt="..."/>
 			</div>
 			<div className="contents">
 				<h2>fire</h2>
@@ -115,7 +99,7 @@ We introduce ourselves as leading manufacturer of electrical goods under brand n
 
 		<div className='cards'>
 			<div className="imgBx">
-				<img src={longLasting} id="img"/>
+				<img src={longLasting} id="img" alt="..."/>
 			</div>
 			<div className="contents">
 				<h2>long life</h2>
@@ -125,7 +109,7 @@ We introduce ourselves as leading manufacturer of electrical goods under brand n
 
 		<div className='cards'>
 			<div className="imgBx">
-				<img src={meter} id="img"/>
+				<img src={meter} id="img" alt="..."/>
 			</div>
 			<div className="contents">
 				<h2>meter</h2>
@@ -135,7 +119,7 @@ We introduce ourselves as leading manufacturer of electrical goods under brand n
 	</div>
 	
 	<div>
-		<img src={img6} id="different_use"/>
+		<img src={img6} id="different_use" alt="..."/>
 	</div>
 
 	<Bottom/>

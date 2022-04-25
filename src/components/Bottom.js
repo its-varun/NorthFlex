@@ -1,6 +1,7 @@
 import React from 'react'
 import './Bottom.css'
 import footer from "../WebsiteMaterial/images/footer.png"
+import { Link } from 'react-router-dom'
 
 export default function Bottom() {
   return (
@@ -8,16 +9,16 @@ export default function Bottom() {
         <div id="footer">
             <div id="first_footer">
                 <h1 id="help">We're here to help you</h1>
-                <a href="#">
+                <Link to="/contactus">
                     <button className="button">
                         Contact Us
                     </button>
-                </a>
-                <a href="./Dealer.js">
+                </Link>
+                <Link to="/dealer">
                     <button className='button' style={{marginLeft:"20px"}}>
                         Dealership  Inquiry
                     </button>
-                </a>
+                </Link>
                 <h3 className='info' style={{marginTop:"35px"}}>
                     1234-567-9000
                 </h3>
@@ -55,7 +56,7 @@ export default function Bottom() {
             </div>
 
             <div id="third_footer">
-                <img src={footer} id="footer_image" />
+                <img src={footer} id="footer_image" alt="..."/>
             
             </div>
 
