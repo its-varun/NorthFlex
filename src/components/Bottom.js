@@ -13,7 +13,7 @@ export default function Bottom() {
                         Contact Us
                     </button>
                 </a>
-                <a href="#">
+                <a href="./Dealer.js">
                     <button className='button' style={{marginLeft:"20px"}}>
                         Dealership  Inquiry
                     </button>

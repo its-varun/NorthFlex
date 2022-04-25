@@ -175,6 +175,10 @@ body{
     border: none;
     width:25%;
 }
+#different_use{
+    height:100%;
+    width:100%;
+}
   
 #intro{
     width:100%;

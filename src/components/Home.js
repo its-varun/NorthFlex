@@ -8,7 +8,8 @@ import fire from "../WebsiteMaterial/images/fire.jpg"
 import electrician from "../WebsiteMaterial/images/electrician.jpg"
 import longLasting from "../WebsiteMaterial/images/longLasting.png"
 import meter from "../WebsiteMaterial/images/meter.jpg"
-import Bottom from "./Bottom";
+import Bottom from "./Bottom"
+import img6 from  "../WebsiteMaterial/images/img6.jpg"
 
 
 
@@ -96,6 +97,8 @@ We introduce ourselves as leading manufacturer of electrical goods under brand n
 		
 	</div>
 
+
+
 	<h1 id="quality">
 		Quality . Guarantted
 	</h1>
@@ -129,6 +132,10 @@ We introduce ourselves as leading manufacturer of electrical goods under brand n
 				<p>ejariewihkdefewuohfeneiods</p>
 			</div>
 		</div>
+	</div>
+	
+	<div>
+		<img src={img6} id="different_use"/>
 	</div>
 
 	<Bottom/>
