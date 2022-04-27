@@ -3,12 +3,12 @@ import './ContactUs.css'
 import Navbar from './Navbar'
 import contactUsImage from '../WebsiteMaterial/images/ContactUs.jpg'
 
-export default function () {
+export default function ContactUs () {
     return (
         <div>
             <Navbar />
             <div className='contactUs'>
-                <img class="contactUsImage" src={contactUsImage} alt="..." />
+                <img className="contactUsImage" src={contactUsImage} alt="..." />
                 <div>
                     <input placeholder='Name' />
                     <input placeholder='Company' />

@@ -1,29 +1,30 @@
+
 #heroImage{
-    /* margin-top:100px; */
+    height: 100vh;
     width:100vw;
-    height:100vh;
-     background-image: url("../WebsiteMaterial/images/img1.jpg");
+    background-image: url("../WebsiteMaterial/images/aboutus2.jpg");
     background-attachment: fixed;
-    /* background-position: center; */
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* display: flex;
-    justify-content:center; */
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .heroContent{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
     color: white;
-    width: 40vw;
     margin-left: 30px;
     padding-top: 130px;
 }
 .heroContent h1{
-    font-weight: bolder;
+    font-weight: bold;
+    font-size: 120px;
 }
 .heroContent p{
     font-size: 20px;
@@ -31,40 +32,113 @@
 
 /* About Page */
 .aboutContent{
+    font-size: 18px;
     margin-top:50px;
-    width: 90vw;
+    width: 60vw;
     margin-left:auto;
     margin-right:auto;
+    text-align: center;
 }
 .aboutContent h1{
-    color: #dc2520;
+    color: #001747;
+    font-weight: bold;
 }
-.aboutContent p:nth-child(2){
-    font-size:35px;
-}
-.aboutContent p:nth-child(3){
-    font-size:20px;
-}
-
-/* About Directors */
-
 .Directors{
     margin-top:70px;
+    margin-bottom:70px;
     width: 100vw;
-    margin-left:auto;
-    margin-right:auto;
-    box-shadow: 0 0 20px 20px rgba(238, 238, 238, 0.8);
+}
+.director_1{
     background-color: rgba(240, 240, 240, 0.8);
-    padding: 50px 100px 50px;
-}
-.Directors div{
+    height:100vh;
     display:flex;
-    margin-top: 30px;
-    
+    align-items: center;
+    justify-content: center;
+    /* margin-left:100px; */
 }
-.aboutDirector{
+.director_1 img{
+    margin-left:100px;
+}
+.director_2 img{
+    margin-right:100px;
+}
+.director_2{
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.aboutDirector {
+    padding-left:100px;
+    padding-right:100px;
+}
+.aboutDirector p:nth-child(1){
+    font-size: 23px;
+    color:#001747;
+    font-weight: 600;
+}
+.aboutDirector p:nth-child(2){
+    font-size: 30px;
+}
+.aboutDirector p:nth-child(3){
     font-size: 20px;
-    margin-left:30px;
-    width: 60vw;
-    margin-top:60px;
+    color: #555555;
+}
+.Directors img{
+    box-shadow: -12px 12px #d9dffb;
+}
+
+.indefatigableTeam{
+    background-color: rgba(240, 240, 240, 0.8);
+    text-align: center;
+}
+.indefatigableTeam h1{
+    color: #001747;
+    padding-top:20px;
+}
+.indefatigableTeamContainer{
+    height:100vh;
+    width: 100vw;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.cardContainer{
+    width: 170px;
+    margin-top:30px;
+}
+.cardDivision{
+    width: 220px;
+    height: 280px;
+    background-color: white;
+    border-radius: 10px;
+}
+.cardDivision p:nth-child(1){
+    font-size: 25px;
+    color: #dd241f;
+    font-weight: 600;
+    padding-top: 30px;
+}
+.cardDivision p:nth-child(2){
+    font-size: 23px;
+    color:#001747;
+    font-weight: 600;
+    margin-top: -15px;
+}
+
+.lateSection {
+    margin-top:100px;
+    margin-bottom:100px;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.lateSection div{
+    width: 50vw;
+    font-size:18px
+}
+.lateSection div p:nth-child(1){
+    font-weight: bold;
+}.lateSection div p:nth-child(2){
+    /* font-weight: bold; */
 }

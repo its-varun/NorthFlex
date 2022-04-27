@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <nav id="nav" className="navbar navbar-expand-lg navbar-light">
 	  <div className="container-fluid" >
-	    <img src={Northflex_logo} id="North_logo" href="#" />
+	    <img src={Northflex_logo} id="North_logo" alt="..." />
 	    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 	      <span className="navbar-toggler-icon"></span>
 	    </button>
