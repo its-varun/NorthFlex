@@ -14,7 +14,7 @@ export default function Bottom() {
                         Contact Us
                     </button>
                 </Link>
-                <Link to="/dealer">
+                <Link to="/contactus">
                     <button className='button' style={{marginLeft:"20px"}}>
                         Dealership  Inquiry
                     </button>

@@ -15,7 +15,7 @@ export default function Navbar() {
 	        <Link className="nav_link" to="/">HOME</Link>
 	        <Link className="nav_link" to="/about">ABOUT US</Link>
 	        <Link className="nav_link" to="#">OUR PRODUCTS</Link>
-	        <Link className="nav_link" to="#">SUPPORT</Link>
+	        <Link className="nav_link" to="/contactus">SUPPORT</Link>
 	        <Link className="nav_link" to="/contactus">CONTACT US</Link>
 	      </div>
 	    </div>

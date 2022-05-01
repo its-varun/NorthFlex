@@ -180,6 +180,34 @@ body{
     width:100%;
 }
   
+/* #intro{
+    width:100%;
+    height:100%;
+    font-family: calibri;
+
+}
+
+#welcome{
+    margin-top:4%;
+    margin-left:3%;
+    font-family:calibri;
+    font-weight: 500;
+
+
+}
+#line_northflex{
+    color:rgb(255, 0, 0);
+    width:27%;
+    height:3px;
+    margin-left:3%;
+}
+#intro_mid{
+    display:flex;
+}
+#electrician{
+    height:400px;
+} */
+
 #intro{
     width:100%;
     height:100%;

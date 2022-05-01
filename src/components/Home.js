@@ -10,6 +10,7 @@ import meter from "../WebsiteMaterial/images/meter.jpg"
 import Bottom from "./Bottom"
 import img6 from "../WebsiteMaterial/images/img6.jpg"
 import Navbar from './Navbar'
+import northflex_line from '../WebsiteMaterial/images/northflex_line.jpeg'
 
 
 
@@ -23,19 +24,23 @@ export default function Home() {
 			</div>
 
 			<div id="intro" >
-				<h2 id="welcome">
-					WELCOME TO NORTHFLEX
-				</h2>
-				<hr id="line_northflex" />
+					<h2 id="welcome">
+						WELCOME TO NORTHFLEX
+					</h2>
+					<hr id="line_northflex" />
 
-				<div id="intro_mid">
-					<img src={electrician} id="electrician" alt="..." />
-					<p>
-						We introduce ourselves as leading manufacturer of electrical goods under brand name of NIROL. Garg Industries established in the year 2000, is a professional company having specialized in designing, manufacturing and marketing of electrical wires, cables, main switch gear, change over switches, Kit-Kat fuse, domestic and similar purpose switches and socket outlets and heating elements. Our mission is to go to extra mile in satisfying our customers has been instrumental in propelling the company to a premiership position in the niche market of QUALITY WIRES, CABLES & ELECTRIC ASSESSORIES for the domestic and industrial use.   Quality is the life of enterprise! Garg Industries always provide first class products to its sufficient customers and provide excellent service to co-operative clients with honestly and eco friendly nature.
-					</p>
+					<div id="intro_mid">
+						<img src={electrician} id="electrician" alt="..." />
+						<div>
+							<p>
 
+								We introduce ourselves as leading manufacturer of electrical goods under brand name of NIROL. Garg Industries established in the year 2000, is a professional company having specialized in designing, manufacturing and marketing of electrical wires, cables, main switch gear, change over switches, Kit-Kat fuse, domestic and similar purpose switches and socket outlets and heating elements. Our mission is to go to extra mile in satisfying our customers has been instrumental in propelling the company to a premiership position in the niche market of QUALITY WIRES, CABLES & ELECTRIC ASSESSORIES for the domestic and industrial use.   Quality is the life of enterprise! Garg Industries always provide first class products to its sufficient customers and provide excellent service to co-operative clients with honestly and eco friendly nature.
+							</p>
+							<img src={northflex_line} style={{ width: "60%", height: "30%" }} alt="..."/>
+						</div>
+
+					</div>
 				</div>
-			</div>
 
 			<div id="wrapper">
 				<div style={{ display: "flex" }}>

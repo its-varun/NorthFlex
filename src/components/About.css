@@ -139,6 +139,4 @@ body{
 }
 .lateSection div p:nth-child(1){
     font-weight: bold;
-}.lateSection div p:nth-child(2){
-    /* font-weight: bold; */
 }
