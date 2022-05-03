@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Northflex_logo from "../WebsiteMaterial/images/Northflex_logo.jpg"
 
 import { Link } from 'react-router-dom'
 export default function Navbar() {
+	const [isLoggedin, setIsLoggedin] = useState(localStorage.getItem('token'))
+	const handleLogout = ()=>{
+		setIsLoggedin('');
+		localStorage.removeItem('token');
+	}
   return (
     <nav id="nav" className="navbar navbar-expand-lg navbar-light">
 	  <div className="container-fluid" >
@@ -17,6 +22,7 @@ export default function Navbar() {
 	        <Link className="nav_link" to="#">OUR PRODUCTS</Link>
 	        <Link className="nav_link" to="/contactus">SUPPORT</Link>
 	        <Link className="nav_link" to="/contactus">CONTACT US</Link>
+	        {isLoggedin?<Link onClick={handleLogout} className="nav_link" to="#">LOGOUT</Link>:<Link className="nav_link" to="/login">LOGIN</Link>}
 	      </div>
 	    </div>
 	  </div>
