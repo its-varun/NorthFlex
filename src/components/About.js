@@ -6,6 +6,7 @@ import Director2 from '../WebsiteMaterial/images/Director2.jpg'
 import Late from '../WebsiteMaterial/images/late.webp'
 import Bottom from './Bottom'
 import { useInView } from 'react-intersection-observer';
+import Navbar from './Navbar'
 
 
 export default function About(props) {
@@ -47,6 +48,7 @@ export default function About(props) {
 
   return (
     <>
+    <Navbar/>
       <div className='HeroSection'>
         <div id="heroImage">
           <div className='heroContent'>

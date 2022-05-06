@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './ContactUs.css'
 import Bottom from './Bottom'
+import Navbar from './Navbar';
 
 export default function ContactUs() {
 
@@ -15,6 +16,7 @@ export default function ContactUs() {
 
     return (
         <div>
+            <Navbar/>
             <div className='contact'>
                 <div className='hero'>
                     CONTACT

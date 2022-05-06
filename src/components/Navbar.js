@@ -19,9 +19,10 @@ export default function Navbar() {
 	      <div className="navbar-nav">
 	        <Link className="nav_link" to="/">HOME</Link>
 	        <Link className="nav_link" to="/about">ABOUT US</Link>
-	        <Link className="nav_link" to="#">OUR PRODUCTS</Link>
+	        <Link className="nav_link" to="/products">OUR PRODUCTS</Link>
 	        <Link className="nav_link" to="/contactus">SUPPORT</Link>
 	        <Link className="nav_link" to="/contactus">CONTACT US</Link>
+			{/* <a href="/contactus">About2</a> */}
 	        {isLoggedin?<Link onClick={handleLogout} className="nav_link" to="#">LOGOUT</Link>:<Link className="nav_link" to="/login">LOGIN</Link>}
 	      </div>
 	    </div>

@@ -1,104 +1,132 @@
-* {
-  box-sizing: border-box;
-  font-family: inherit;
-}
+/* *{
+    overflow-y:hidden ;
+} */
 
-.loginWrapper {
-  margin: 0;
-  padding-bottom: 20px;
-  font-family: "Nunito", sans-serif;
-  color: #fefefe;
-  background: #fefefe;
-}
-
-.loginWrapper {
-  margin: 0px auto;
-  padding-top:100px;
-  width: 400px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-.section {
-  padding: 1rem;
-}
-
-.header {
-  position: relative;
-  text-align: center;
-}
-.header__text {
-  position: relative;
-  padding: 3.5rem 0 7rem;
-}
-.header__text > h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-.header > .trapezoid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: skewY(-10deg);
-  transform-origin: top left;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  background: linear-gradient(rgba(190, 17, 17, 0.8), rgba(0, 0, 0, 0.8));
-  background-position: top center;
-  background-attachment: fixed;
-}
-
-.loginForm {
-  margin: 0 auto;
-  max-width: 17rem;
-  overflow: auto;
-}
-.loginForm > * + * {
-  margin-top: 1rem;
-}
-.loginForm > input {
-  border: 0;
-  border-bottom: 1px solid #1126be;
-  border-radius: 0;
-  width: 100%;
-  height: 2rem;
-  padding: 0 0 0.25rem 0;
-  font-size: 1rem;
-  color: #1126be;
-  background: #fefefe;
-}
-.loginForm > input:focus {
-  outline: none;
-}
-.loginForm > input::placeholder {
-  color: #1126be;
-}
-.loginForm button {
-  border: 0;
-  border-radius: 200px;
-  width: 100%;
-  padding: 0.85rem;
-  font-size: 1rem;
-  color: #fefefe;
-  background: #990303;
-}
-.loginForm{
-  margin-top: 2rem;
-}
-
-.loginForm button:focus {
-  outline: none;
-}
-.loginForm p {
-  margin: 0.25rem 0 0;
-  text-align: center;
-  color: #1126be;
+#login2_login{
+    width:70vw;
+    height:90vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* padding-top: 100px; */
+    margin-top: 30px;
+    /* margin:auto; */
+    margin-left:13%;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 
 }
-.loginForm .signupOrLogin{
-  text-decoration: none;
+#login_form{
+    width:50%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content:center ;
+    height:100%;
 }
 
-.opposite-btn1, .opposite-btn2 {
-  cursor: pointer;
+#details_login{
+    background-color: #f1f1f1;
+    width:50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height:100%;
+}
+#logo{
+    width:230px;
+    height:43px;
+    cursor: pointer;
+    margin-top: -40px;
+}
+.login2_input{
+    width:85%;
+    height:40px;
+    border:none;
+    margin-top: 22px;
+    background-color: #f1f1f1;
+    padding-left: 5px;
+    border-radius: 2px;
+}
+.login2_heading{
+    font-weight: bold;
+    font-size: 45px;
+    margin-top: 10px;
+    /* margin-top:-100px; */
+    margin-bottom:30px;
+    font-family: calibri;
+    color:#0c1027;
+}
+
+.login2_button{
+    border: 0;
+    border-radius: 30px;
+    height:50px;
+    width: 33%;
+    margin-top: 40px;
+    /* padding: 0.85rem; */
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #fefefe;
+    background: #0c1027;
+    transition-duration: 1s;
+}
+.login2_button:hover{
+    background-color: red;
+
+}
+#login_image{
+    margin-top: 10px;
+    /* height:300px;
+    width:300px; */
+
+}
+#signup_image{
+    height:300px;
+    width:300px;
+    margin-top:-20px;
+}
+
+#login2_signup{
+    width:70vw;
+    height:90vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* padding-top: 100px; */
+    margin-top: 30px;
+    /* margin:auto; */
+    margin-left:13%;
+    
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.login2_para{
+    font-weight: bold;
+    margin-left: 50px;
+    margin-right: 50px;
+    color:red;
+}
+.login2_tell:hover{
+    color:red;
+    cursor:pointer;
+}
+
+@media screen and (max-width: 900px){
+    #login_form{
+        /* display: block; */
+        width:100%;
+        margin-top: 40px;
+    }
+    #details_login{
+        /* display: block; */
+        width: 100%;
+    }
+    #login2_login{
+        display: block;
+    }
+    #login2_signup{
+        display: block;
+    }
 }
