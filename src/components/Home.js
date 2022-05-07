@@ -20,7 +20,7 @@ export default function Home() {
 			<Navbar />
 
 			<div id="main_photo">
-				<input type="text" id="search_main" placeholder="Search " />
+				
 			</div>
 
 			<div id="intro" >

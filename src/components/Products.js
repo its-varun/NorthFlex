@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from './Navbar';
 import './Products.css';
-import dropdownarrow from "../WebsiteMaterial/images/dropdownarrow.png"
+import cpvcpipes from '../WebsiteMaterial/images/cpvcpipes.jpg'
 export default function Products() {
 
     const Products = [
@@ -199,6 +199,7 @@ export default function Products() {
                                         <p>Wire thickness: </p>
                                         <button type="button" className="changeWireThickness" data-toggle="modal" data-target={`#exampleModalCenter${productindex}`}>
                                             {Products[productindex].specifications[state[productindex].value].wirethickness}
+                                            <i className="fa-solid fa-caret-down"></i>
                                         </button>
                                         <p>Nos & Diameter: {Products[productindex].specifications[state[productindex].value].NosAndDiameter}</p>
                                         <p>Current Rating: {Products[productindex].specifications[state[productindex].value].currentrating}</p>
@@ -212,6 +213,31 @@ export default function Products() {
                             )
                         })
                     }
+                    <div className="product">
+                        <table>
+                            <tr>
+                                <th>Size (mm)</th>
+                                <th>Size (inch)</th>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>3/4</td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>32</td>
+                                <td>1 1/4</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>1 1/2</td>
+                            </tr>
+                        </table>
+                        <img src={cpvcpipes}  height="200px" alt="..." />
+                    </div>
                 </div>
             </div>
         </>
