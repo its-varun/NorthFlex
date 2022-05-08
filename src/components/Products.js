@@ -2,17 +2,15 @@ import React, { useState } from 'react'
 import Navbar from './Navbar';
 import './Products.css';
 import cpvcpipes from '../WebsiteMaterial/images/cpvcpipes.jpg'
+import Bottom from './Bottom'
 export default function Products() {
 
     const Products = [
         {
             imagename: "CopperWire",
-            name: "SINGLE CORE PVC COPPER WIRE",
             alter: "CopperWire-icon",
-            category: "COPPER WIRE 1 CORE, WIRES CABLES",
             wirename: "SINGLE CORE PVC COPPER WIRE",
             wirelength: "PVC Copper Wire 1 Core (Length 90m)",
-            cablefeature: "Cable Feature:",
 
             specifications: [
                 { wirethickness: "0.75", NosAndDiameter: "11/0.3 (240.2)", currentrating: "7" },
@@ -31,9 +29,7 @@ export default function Products() {
 
         {
             imagename: "4corecopperwire",
-            name: "FLEXIBLE PVC COPPER WIRE",
             alter: "SilverWire-icon",
-            category: "FLEXIBLE PVC COPPER WIRE",
             wirename: "FLEXIBLE PVC COPPER WIRE",
             wirelength: "FLEXIBLE PVC COPPER WIRE (Length 90m)",
 
@@ -53,9 +49,7 @@ export default function Products() {
         },
         {
             imagename: "submersiblecable",
-            name: "SUBMERSIBLE CABLES",
             alter: "CopperWire-icon",
-            category: "FLEXIBLE PVC COPPER WIRE",
             wirename: "SUBMERSIBLE CABLES",
             wirelength: "PVC Copper Wire 1 Core (Length 90m)",
 
@@ -72,11 +66,9 @@ export default function Products() {
         },
         {
             imagename: "dishcable",
-            name: "DISH CO-AXIAL CABLE",
             alter: "CopperWire-icon",
-            category: "FLEXIBLE PVC COPPER WIRE",
             wirename: "DISH CO-AXIAL CABLE",
-            // wirelength: "PVC Copper Wire 1 Core (Length 90m)",
+            wirelength: "PVC Copper Wire 1 Core (Length 90m)",
 
             specifications: [
                 {wiresize: "RG-59"},
@@ -87,10 +79,8 @@ export default function Products() {
         },
         {
             imagename: "pvcinsulatedtwincable",
-            name: "PVC INSULATED TWIN CABLE",
             alter: "CopperWire-icon",
-            category: "FLEXIBLE PVC COPPER WIRE",
-            wirename: "SUBMERSIBLE CABLES",
+            wirename: "PVC INSULATED TWIN CABLE",
             wirelength: "PVC Copper Wire 1 Core (Length 90m)",
 
             specifications: [
@@ -105,10 +95,8 @@ export default function Products() {
         },
         {
             imagename: "CopperWire",
-            name: "PVC INSULATED UN-SHEATHED COPPER WIRE",
             alter: "CopperWire-icon",
-            category: "FLEXIBLE PVC COPPER WIRE",
-            wirename: "SUBMERSIBLE CABLES",
+            wirename: "PVC INSULATED UN-SHEATHED COPPER WIRE",
             wirelength: "PVC Copper Wire 1 Core (Length 90m)",
 
             specifications: [
@@ -163,7 +151,6 @@ export default function Products() {
     return (
         <>
             <Navbar />
-            
             <div className="productContainer">
             <div className='askQuery'>
 
@@ -177,8 +164,8 @@ export default function Products() {
                             return (
                                 <div key={index} className="product">
                                     <div>
-                                        <p>{product.category}</p>
-                                        <p>{product.name}</p>
+                                        {/* <p>{product.category}</p> */}
+                                        {/* <p>{product.name}</p> */}
                                         <p>{product.wirename}</p>
                                         <p>{product.wirelength}</p>
 
@@ -196,14 +183,15 @@ export default function Products() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <p>Wire thickness: </p>
+                                        {(Products[productindex].specifications[state[productindex].value].wirethickness)?<p><i className="fa-solid fa-caret-right"></i>Wire thickness: 
                                         <button type="button" className="changeWireThickness" data-toggle="modal" data-target={`#exampleModalCenter${productindex}`}>
-                                            {Products[productindex].specifications[state[productindex].value].wirethickness}
+                                            <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].wirethickness}</span>
                                             <i className="fa-solid fa-caret-down"></i>
                                         </button>
-                                        <p>Nos & Diameter: {Products[productindex].specifications[state[productindex].value].NosAndDiameter}</p>
-                                        <p>Current Rating: {Products[productindex].specifications[state[productindex].value].currentrating}</p>
-                                        {(Products[productindex].specifications[state[productindex].value].wiresize)? <p>Size: {Products[productindex].specifications[state[productindex].value].wiresize}</p>:""}
+                                        </p>:""}
+                                        {(Products[productindex].specifications[state[productindex].value].NosAndDiameter)?<p><i className="fa-solid fa-caret-right"></i>Nos & Diameter: <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].NosAndDiameter}</span></p>:""}
+                                        {(Products[productindex].specifications[state[productindex].value].currentrating)?<p><i className="fa-solid fa-caret-right"></i>Current Rating: <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].currentrating}</span></p>:""}
+                                        {(Products[productindex].specifications[state[productindex].value].wiresize)? <p><i className="fa-solid fa-caret-right"></i>Size: <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].wiresize}</span></p>:""}
                                         
 
                                     </div>
@@ -214,7 +202,11 @@ export default function Products() {
                         })
                     }
                     <div className="product">
+                        <div>
+                        <p>Pipes</p>
+                        <p>CPVC PIPES</p>
                         <table>
+                            <tbody>
                             <tr>
                                 <th>Size (mm)</th>
                                 <th>Size (inch)</th>
@@ -235,11 +227,15 @@ export default function Products() {
                                 <td>40</td>
                                 <td>1 1/2</td>
                             </tr>
+                            </tbody>
                         </table>
+                        
+                        </div>
                         <img src={cpvcpipes}  height="200px" alt="..." />
                     </div>
                 </div>
             </div>
+            <Bottom/>
         </>
     )
 }

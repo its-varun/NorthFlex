@@ -2,6 +2,7 @@ import React from 'react'
 import './Bottom.css'
 import footer from "../WebsiteMaterial/images/footer.png"
 import { Link } from 'react-router-dom'
+import bottom from "../WebsiteMaterial/images/bottom.png"
 
 export default function Bottom() {
   return (
@@ -19,15 +20,27 @@ export default function Bottom() {
                         Dealership  Inquiry
                     </button>
                 </Link>
-                <h3 className='info' style={{marginTop:"35px"}}>
-                    1234-567-9000
+                <a href="tel:+91 7814412345" style={{textDecoration:"none"}}>
+                <h3 className='info' style={{marginTop:"35px",textDecoration:"none"}}>
+                    +91 7814412345
                 </h3>
-                <h3 className='info'>
-                    northflexxxxx@gmail.com
-                </h3>
-                <h3 className='info'>
-                    https://nothflex.in/
-                </h3>
+                </a>
+                <a href="mailto:suntexcableind@gmail.com"  style={{textDecoration:"none"}}>
+                    <h3 className='info'  style={{textDecoration:"none"}}>
+                        suntexcableind@gmail.com
+                    </h3>
+                </a>
+                <a href="/" style={{textDecoration:"none"}}>
+                    <h3 className='info' style={{textDecoration:"none"}}>
+                        https://nothflex.in/
+                    </h3>
+                </a>
+                <div style={{marginTop:"53px"}}>
+                    <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+                    <a href="https://wa.me/7876695045?text=Hello want to know something" className='whatsapp'>
+                        Connect with us on whatsapp 
+                    </a>
+                </div>
             </div>
             <div id="second_footer">
                 <h1 id="main">NorthFlex</h1>
@@ -61,6 +74,7 @@ export default function Bottom() {
             </div>
 
         </div>    
+        <img src={bottom} id="bottom" height="100px" alt="..."/>
     
     </>
   )
