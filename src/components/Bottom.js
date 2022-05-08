@@ -36,7 +36,7 @@ export default function Bottom() {
                     </h3>
                 </a>
                 <div style={{marginTop:"53px"}}>
-                    <i class="fa-brands fa-whatsapp" id="whatsapp"></i>
+                    <i className="fa-brands fa-whatsapp" id="whatsapp"></i>
                     <a href="https://wa.me/7876695045?text=Hello want to know something" className='whatsapp'>
                         Connect with us on whatsapp 
                     </a>

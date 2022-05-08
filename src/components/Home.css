@@ -27,7 +27,7 @@ body{
     font-weight: 600;
 }
 .nav_link{
-    color:red;
+    color:#001747;
     text-decoration: none;
     margin-right:18px;
     transition-duration: 2s;
@@ -298,6 +298,46 @@ body{
 
 }
 
+#container_home{
+    width:100%;
+    height:100%;
+     background-image: url("../WebsiteMaterial/images/factory1.jpg");
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    /* justify-content:center; */
+
+}
+.content{
+    margin-bottom: 20px;
+    width:39%;
+    /* opacity: 0.9; */
+    background-color: rgb(255 255 255 / 90%);;
+    height:480px;
+    padding-top:20px;
+    padding-left:3%;
+    font-weight: bold;
+
+}
+.content_in{
+    margin-top: 6px;
+    display: flex;
+}
+#icon_clipboard{
+    font-size:20px;
+    margin-top: 5px;;
+    margin-right:5px;
+}
+.content_points{
+    color:black;
+    font-weight: 500;
+    font-family:calibri;
+    font-size: 20px;
+    
+}
 @media screen and (max-width: 1000px){
     #quality{
         font-size: 50px;

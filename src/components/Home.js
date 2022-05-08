@@ -3,11 +3,9 @@ import './Home.css'
 import housewire from "../WebsiteMaterial/images/housewire.jpg"
 import dishcable1 from "../WebsiteMaterial/images/dishcable1.jpg"
 import industrialwires from "../WebsiteMaterial/images/industrialwires.jpg"
-import fire from "../WebsiteMaterial/images/fire.png"
 import electrician from "../WebsiteMaterial/images/electrician.jpg"
-import longLasting from "../WebsiteMaterial/images/longLasting.png"
-import meter from "../WebsiteMaterial/images/meter.png"
 import Bottom from "./Bottom"
+import factory1 from "../WebsiteMaterial/images/factory1.jpg"
 import img6 from "../WebsiteMaterial/images/img6.jpg"
 import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
@@ -99,7 +97,7 @@ export default function Home() {
 			</div> */}
 
 
-			<div style={{backgroundColor:'#f1f1f1'}}>
+			{/* <div style={{backgroundColor:'#f1f1f1'}}>
 			<h1 id="quality">
 				Quality . Guarantted
 			</h1>
@@ -134,7 +132,51 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
+			</div> */}
+			<div id="container_home">
+				<div className='content'>
+					<h2 style={{"marginBottom":"25px"}}>Why choose NorthFlex Cables?</h2>
+					<div className="content_in">
+						<i class="fa-solid fa-clipboard-check" id="icon_clipboard"></i>
+						<p className="content_points">
+						Customer service.
+						</p>
+					</div>
+					<div className="content_in">
+						<i class="fa-solid fa-clipboard-check" id="icon_clipboard"></i>
+						<p className="content_points">
+						High performance cables.
+						</p>
+					</div>
+					<div className="content_in">
+						<i class="fa-solid fa-clipboard-check" id="icon_clipboard"></i>
+						<p className="content_points">
+						Wide range of cables.
+						</p>
+					</div>
+					<div className="content_in">
+						<i class="fa-solid fa-clipboard-check" id="icon_clipboard"></i>
+						<p className="content_points">
+						Highly flexible cables.
+						</p>
+					</div>
+					<div className="content_in">
+						<i class="fa-solid fa-clipboard-check" id="icon_clipboard"></i>
+						<p className="content_points">
+						Cables engineered for greater durability and<br/>reliability.
+						</p>
+					</div>
+					<div className="content_in">
+						<i class="fa-solid fa-clipboard-check" id="icon_clipboard"></i>
+						<p className="content_points">
+						Cables designed to perform in all kinds of<br/>installations.
+						</p>
+					</div>
+				</div>
+				
 			</div>
+
+
 			<div>
 				<img src={img6} id="different_use" alt="..." />
 			</div>

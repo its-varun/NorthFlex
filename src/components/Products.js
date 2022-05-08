@@ -153,7 +153,17 @@ export default function Products() {
             <Navbar />
             <div className="productContainer">
             <div className='askQuery'>
-
+                <h3>Product Range</h3>
+                <ul>
+                    <li>Single Core Copper Wire</li>
+                    <li>Fexible PVC Copper Wire</li>
+                    <li>Submersible Cable</li>
+                    <li>Dish Co-Axial Cable</li>
+                    <li>PVC Insulated Un-Sheathed Copper Wire</li>
+                    <li>Pipes</li>
+                </ul>
+                <p className='prices'>As prices change frequently. To know more about prices contact us:</p>
+                <button className='askQueryButton'>Ask Query</button>
             </div>
                 <div className="products-info">
                     {
