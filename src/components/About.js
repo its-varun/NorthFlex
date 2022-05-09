@@ -53,7 +53,6 @@ export default function About(props) {
         <div id="heroImage">
           <div className='heroContent'>
             <h1>About Us</h1>
-            {/* <p>NorthFlex India Limited is a Fast Moving Electrical Goods (FMEG) Company with an extremely strong global presence, thanks to our philosophy of Make in India, extensive distribution network and world class quality.</p> */}
           </div>
         </div>
       </div>
@@ -111,18 +110,22 @@ export default function About(props) {
             <div className='cardDivision'>
               <p>{dealers}+</p>
               <p>Trusted Dealers</p>
+              <i className="fa-solid fa-handshake"></i>
             </div>
           </div>
           <div className="cardContainer">
             <div className='cardDivision'>
               <p>{products}+</p>
               <p>Fine Products</p>
+              <i className="fa-solid fa-circle-nodes"></i>
+              <i className="fa-solid fa-circle-nodes rotate"></i>
             </div>
           </div>
           <div className="cardContainer">
             <div className='cardDivision'>
               <p>{yearsOld}+</p>
               <p>Years in the market</p>
+              <i className="fa-solid fa-shop"></i>
             </div>
           </div>
         </div>

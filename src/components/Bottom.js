@@ -10,13 +10,13 @@ export default function Bottom() {
         <div id="footer">
             <div id="first_footer">
                 <h1 id="help">We're here to help you</h1>
-                <Link to="/contactus">
+                {/* <Link to="/contactus">
                     <button className="button">
                         Contact Us
                     </button>
-                </Link>
+                </Link> */}
                 <Link to="/contactus">
-                    <button className='button' style={{marginLeft:"20px"}}>
+                    <button className='button' >
                         Dealership  Inquiry
                     </button>
                 </Link>
@@ -44,27 +44,37 @@ export default function Bottom() {
             </div>
             <div id="second_footer">
                 <h1 id="main">NorthFlex</h1>
+                <Link to="/products" style={{"textDecoration":"none"}}>
                 <h3 className='info'>
                     Aluminium Cables
                 </h3>
+                </Link>
+                <Link to="/products" style={{"textDecoration":"none"}}>
                 <h3 className='info'>
-                    CCTV Cables
+                    Submersible Cables
                 </h3>
-                <h3 className='info'>
+                </Link>
+                <Link to="/products" style={{"textDecoration":"none"}}>
+                <span className='info'>
                     Co-Axial Cables
-                </h3>
+                </span>
+                </Link>
+                <Link to="/products" style={{"textDecoration":"none"}}>
                 <h3 className='info'>
-                    Flexible Wires
+                    Copper Wires
                 </h3>
+                </Link>
+                <Link to="/products" style={{"textDecoration":"none"}}>
                 <h3 className='info'>
-                    Multistrand Wires
+                    PVC Pipes
                 </h3>
+                </Link>
                 <div id="contact_icons">
                     <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjlgeDorbzwAhVPDCsKHVF8BJIYABAAGgJzZg&ae=2&ohost=www.google.com&cid=CAESQOD2jimxu7s00ezwY1HM_qBD0C7yH-6Ezk32Mn55FpiS8HLHplRfnSTcs-DkW3zfUdKXhPzSWT5JIjTh7TRHTPY&sig=AOD64_2V5kLYi7mDRCGZIpV5Ww7Q2ntx7Q&q&adurl&ved=2ahUKEwidmtjorbzwAhW0heYKHZaRCQEQ0Qx6BAgGEAE" className="link_footer"><i  id="contact_icon" className="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/" className="link_footer"><i  id="contact_icon" className="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/" className="link_footer"><i  id="contact_icon" className="fab fa-linkedin"></i></a>
-                    <a href="https://www.apple.com/in/" className="link_footer"><i  id="contact_icon" className="fab fa-apple"></i></a>
-                    <a href="https://twitter.com/?lang=en" className="link_footer"><i  id="contact_icon" className="fab fa-twitter"></i></a>
+                    {/* <a href="https://www.apple.com/in/" className="link_footer"><i  id="contact_icon" className="fab fa-apple"></i></a>
+                    <a href="https://twitter.com/?lang=en" className="link_footer"><i  id="contact_icon" className="fab fa-twitter"></i></a> */}
                 </div>
             </div>
 

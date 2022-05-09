@@ -18,7 +18,6 @@ body{
     width:230px;
     height:43px;
     cursor: pointer;
-    /*position: absolute;*/
 }
 #navbarNavAltMarkup{
     margin-left:25%;
@@ -36,8 +35,8 @@ body{
     color:black;
 }
 #main_photo{
-    width:100%;
-    height:630px;
+    width:100vw;
+    height:100vh;
      background-image: url("../WebsiteMaterial/images/img1.png");
     background-attachment: fixed;
     background-position: center;
@@ -46,7 +45,7 @@ body{
     display: flex;
     justify-content:center;
 
-   /* align-items: center;*/
+   
 }
 
 #intro_para{
@@ -293,7 +292,8 @@ body{
     font-weight: 700;
     font-family: calibri;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     text-shadow:2px 3px #111;
 
 }
@@ -316,12 +316,13 @@ body{
     width:39%;
     /* opacity: 0.9; */
     background-color: rgb(255 255 255 / 90%);;
-    height:480px;
+    height:100%;
     padding-top:20px;
     padding-left:3%;
     font-weight: bold;
 
 }
+
 .content_in{
     margin-top: 6px;
     display: flex;
@@ -351,6 +352,9 @@ body{
     .wrapper{
         display: flex;
         flex-wrap: wrap;
+    }
+    .content{
+        width:90%;
     }
     .card{
         margin-top:10px;

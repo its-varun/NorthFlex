@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import './Products.css';
 import cpvcpipes from '../WebsiteMaterial/images/cpvcpipes.jpg'
 import Bottom from './Bottom'
+import factory_inside from '../WebsiteMaterial/images/factory_inside.png'
 export default function Products() {
 
     const Products = [
@@ -151,6 +152,7 @@ export default function Products() {
     return (
         <>
             <Navbar />
+            <img src={factory_inside} alt="..." id="product_starting"/>
             <div className="productContainer">
             <div className='askQuery'>
                 <h3>Product Range</h3>

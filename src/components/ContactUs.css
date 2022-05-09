@@ -6,7 +6,7 @@
 .hero{
     /* padding-top:100px; */
     padding-left: 50px;
-    background-color: #de241d;
+    background-color: #001747;
     color: white;
     font-size: 50px;
     height: 30vh;
@@ -15,7 +15,7 @@
     align-items: center;
 }
 .contactUs, .dealerEnquiry{
-    background-color: #e9726d;
+    background-color: #666f83;
     padding: 20px;
     cursor: pointer;
     font-size:15px;
@@ -55,7 +55,7 @@
     border:none;
     height:5px;
 }
-.content{
+.contactUsContent{
     margin-top:25px;
     margin-left: 4%;
     margin-right: 1%;
@@ -103,18 +103,7 @@
     cursor:pointer;
     background-color: red;
 }
-@media only screen and (max-width: 900px){
-   #main{
-       display: block;
-   }
-   .box{
-       width:95%;
-       margin:auto;
-   }
-   .heading{
-       padding-top: 10px;
-   }
-}
+
 
 /* Dealer Enquiry */
 .dealershipEnquiry{
@@ -238,6 +227,9 @@ h3 {
     color:red;
 
 }
+#form{
+    padding:20px;
+}
 #form_side_bar{
     margin-left: 40px;
     width:35%;
@@ -309,7 +301,12 @@ h3 {
     }
 
 }
-@media only screen and (max-width: 550px){
+
+@media only screen and (max-width: 960px){
+    .contact {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
     #form_section{
         margin-left:4px;
     }
@@ -318,5 +315,29 @@ h3 {
     }
     #form_side_bar{
         margin-left: 4px;
+    }
+    .contact_us #main{
+        flex-direction: column;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .contact_us #main .box:nth-child(1){
+        margin-bottom: 50px;
+    }
+    .box{
+        width:90vw;
+        margin:auto;
+    }
+    .box form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .heading{
+        padding-top: 10px;
+    }
+    #form{
+        margin-left:10px;
+        margin-right:10px;
     }
 }

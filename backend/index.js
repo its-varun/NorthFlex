@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/sendquery', require('./routes/sendquery'));
 // app.use('/api/friend', require('./routes/friend'));
 // app.use('/api/sendmail', require('./routes/sendmail'));
 
