@@ -34,10 +34,10 @@ body{
 .nav_link:hover{
     color:black;
 }
-#main_photo{
+/* #main_photo{
     width:100vw;
     height:100vh;
-     background-image: url("../WebsiteMaterial/images/img1.png");
+    background-image: url("../WebsiteMaterial/images/img1.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@ body{
     justify-content:center;
 
    
-}
+} */
 
 #intro_para{
     font-size: 20px;

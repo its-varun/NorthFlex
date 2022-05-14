@@ -5,6 +5,10 @@ import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import Login from "./components/Login";
 import Products from "./components/Products";
+import EnterOtp from "./components/EnterOtp";
+import SendOtp from "./components/ForgetPassword/SendOtp";
+import ResetPasswordOtp from "./components/ForgetPassword/ResetPasswordOtp";
+import SetPassword from "./components/ForgetPassword/SetPassword";
 function App() {
   return (
     <>
@@ -15,6 +19,10 @@ function App() {
           <Route exact path="/contactus" element={<ContactUs/>} />
           <Route exact path="/login" element={<Login/>} />
           <Route exact path="/products" element={<Products/>} />
+          <Route exact path="enterotp" element={<EnterOtp/>} />
+          <Route exact path="sendotp" element={<SendOtp/>} />
+          <Route exact path="/resetpasswordotp" element={<ResetPasswordOtp/>} />
+          <Route exact path="/setpassword" element={<SetPassword/>} />
         </Routes>
       </BrowserRouter>
 

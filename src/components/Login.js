@@ -18,14 +18,13 @@ export default function Login2() {
     const [credentials, setCredentials] = useState({email: "", password:""});
     let navigate = useNavigate();
 
-    const handleSubmit = async (e)=>{
+    const handleLogin = async (e)=>{
         e.preventDefault();
         const response = await fetch("http://localhost:5000/api/auth/login", {
             method: "POST",
             headers: {
                 'Content-type': 'application/json'
             },
-
             body: JSON.stringify({email: credentials.email, password: credentials.password})
 
         });
@@ -35,7 +34,6 @@ export default function Login2() {
             // Save the auth Token and redirect
             localStorage.setItem('token', json.authToken);
             navigate('/');
-            
         }
         else{
             alert('Please enter the valid credentials');
@@ -48,7 +46,7 @@ export default function Login2() {
     }
     const [credentials1, setCredentials1] = useState({name:"", email: "", password:""});
     let navigate1 = useNavigate();
-    const handleSubmit1 = async (e)=>{
+    const handleSignup = async (e)=>{
         e.preventDefault();
         const {name, email, password} = credentials1;
         const response = await fetch("http://localhost:5000/api/auth/createaccount", {
@@ -65,7 +63,7 @@ export default function Login2() {
         if(json.success){
             // Save the auth Token and redirect
             localStorage.setItem('token', json.authToken);
-            navigate1('/');
+            navigate1('/enterotp', {state:{email}});
             
         }
         else{
@@ -77,6 +75,7 @@ export default function Login2() {
     const onChange1 = (e)=>{
         setCredentials1({...credentials1, [e.target.name]: e.target.value}); // This took 2 hours. Don't put [] over e.target.value.
     }
+
   return (
     <>
       <div style={{ 'display': `${state === 'login' ? 'block' : 'none'}` }}>
@@ -87,12 +86,11 @@ export default function Login2() {
                   <h1 className='login2_heading'>
                     Sign in
                   </h1>
-                  <form onSubmit={handleSubmit}>
+                  <form onSubmit={handleLogin}>
                       <input type="text" name="email" className="login2_input" value={credentials.email} onChange={onChange} placeholder="Email"/> 
                       <input type="password" name="password" className="login2_input" value={credentials.password} onChange={onChange} placeholder='Password'/>
-
                       <button className="login2_button" >SIGN IN</button>
-
+                      <Link to="/sendotp"><p>Forget Password?</p></Link>
                       <p className="login2_tell"  onClick={showSignup} >New to NorthFlex? Create Account </p>
                   </form>
                 </div>
@@ -125,9 +123,8 @@ export default function Login2() {
                 <Link to="/"><img src={logo} id="logo"  alt=".../"/></Link>
                   <h1 className='login2_heading'>
                     Sign Up
-                  
                   </h1>
-                  <form onSubmit={handleSubmit1}>
+                  <form onSubmit={handleSignup}>
                     <input type="text"  name="name" className="login2_input" onChange={onChange1} placeholder='Name'/> 
                     <input type="email" name="email" className="login2_input" onChange={onChange1} placeholder='Email'/> 
                     <input type="password" name="password" className="login2_input" onChange={onChange1} placeholder='Password'/>

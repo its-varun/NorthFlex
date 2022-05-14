@@ -10,7 +10,7 @@ import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
 import northflex_line from '../WebsiteMaterial/images/northflex_line.jpeg'
 
-
+import mainphoto from "../WebsiteMaterial/images/img1.png";
 
 export default function Home() {
 	return (
@@ -18,7 +18,7 @@ export default function Home() {
 			<Navbar />
 
 			<div >
-				<img src="mainPhoto" id="main_photo" alt="..."/>
+				<img src={mainphoto} id="main_photo" alt="..."/>
 			</div>
 
 			<div id="intro" >
