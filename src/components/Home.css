@@ -30,6 +30,10 @@ body{
     font-family: calibri;
     font-weight: 600;
 }
+.navbar-nav{
+    position: absolute;
+    right: 30px;
+}
 .container-fluid{
     padding-right: 0;
     padding-left:0;
@@ -378,5 +382,8 @@ body{
     }
     #intro_para{
         margin-left:2%;
+    }
+    .navbar-nav{
+            position: static;
     }
 }
