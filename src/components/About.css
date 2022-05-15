@@ -1,4 +1,3 @@
-
 #heroImage{
     height: 100vh;
     width:100vw;
@@ -25,15 +24,18 @@
 .heroContent p{
     font-size: 20px;
 }
-
+.About{
+    display: flex;
+}
 /* About Page */
 .aboutContent{
     font-size: 18px;
     margin-top:50px;
+    font-family: calibri;
     width: 60vw;
-    margin-left:auto;
+    margin-left:5%;
     margin-right:auto;
-    text-align: center;
+    /* text-align: center; */
 }
 .aboutContent h1{
     color: #001747;
@@ -44,6 +46,12 @@
     margin-bottom:70px;
     width: 100vw;
 }
+#suntex{
+    height:400px;
+    width:400px;
+    margin-top:65px;
+    margin-left:5%;
+}
 .director_1{
     background-color: rgba(240, 240, 240, 0.8);
     height:100vh;
@@ -52,8 +60,16 @@
     justify-content: center;
     /* margin-left:100px; */
 }
+#owner{
+    border-radius: 50%;
+    height:250px;
+    width:250px;
+}
 .director_1 img{
     margin-left:100px;
+}
+.about_paraa{
+    text-align: left;
 }
 .director_2 img{
     margin-right:100px;

@@ -53,6 +53,8 @@
     font-size: 17px;
     font-family: calibri;
     margin-top:15px;
+    width:80%;
+    margin-bottom: 20px;
     font-weight: bold;
     color:red;
     cursor: pointer;

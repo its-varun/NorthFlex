@@ -20,9 +20,9 @@ export default function Bottom() {
                         Dealership  Inquiry
                     </button>
                 </Link>
-                <a href="tel:+91 7814412345" style={{textDecoration:"none"}}>
+                <a href="tel:+91 9872802227" style={{textDecoration:"none"}}>
                 <h3 className='info' style={{marginTop:"35px",textDecoration:"none"}}>
-                    +91 7814412345
+                    +91 9872802227
                 </h3>
                 </a>
                 <a href="mailto:suntexcableind@gmail.com"  style={{textDecoration:"none"}}>
@@ -37,7 +37,7 @@ export default function Bottom() {
                 </a>
                 <div style={{marginTop:"53px"}}>
                     <i className="fa-brands fa-whatsapp" id="whatsapp"></i>
-                    <a href="https://wa.me/7876695045?text=Hello want to know something" className='whatsapp'>
+                    <a href="https://wa.me/+919872802227?text=Hello want to know something.............." className='whatsapp'>
                         Connect with us on whatsapp 
                     </a>
                 </div>
@@ -55,9 +55,9 @@ export default function Bottom() {
                 </h3>
                 </Link>
                 <Link to="/products" style={{"textDecoration":"none"}}>
-                <span className='info'>
+                <h3 className='info'>
                     Co-Axial Cables
-                </span>
+                </h3>
                 </Link>
                 <Link to="/products" style={{"textDecoration":"none"}}>
                 <h3 className='info'>

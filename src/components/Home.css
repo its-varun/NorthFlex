@@ -34,10 +34,9 @@ body{
 .nav_link:hover{
     color:black;
 }
-/* #main_photo{
+#main_photo{
     width:100vw;
-    height:100vh;
-    background-image: url("../WebsiteMaterial/images/img1.png");
+    height:auto;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,11 +45,12 @@ body{
     justify-content:center;
 
    
-} */
+}
 
 #intro_para{
-    font-size: 20px;
+    font-size: 18px;
     color:#0c1027;
+    margin-left: 2%;
     font-weight: bold;
 }
 #search_main{
@@ -133,7 +133,7 @@ body{
     left:0;
 
 }
-.card .info{
+.card .info1{
     position: relative;
     z-index: 3;
     color:#fff;
@@ -153,7 +153,7 @@ body{
     text-decoration: none;
 }
 
-.card:hover .info{
+.card:hover .info1{
     opacity: 1;
     transform: translateY(0px);
 }
@@ -185,10 +185,10 @@ body{
 }
 #intro_mid{
     display:flex;
-}
+}*/
 #electrician{
     height:400px;
-} */
+} 
 
 #intro{
     width:100%;
@@ -216,6 +216,7 @@ body{
 }
 #electrician{
     height:400px;
+    margin-left: 2%;
 }
 
 #advantages{
@@ -314,9 +315,11 @@ body{
 .content{
     margin-bottom: 20px;
     width:39%;
+    margin-left: 1%;
     /* opacity: 0.9; */
     background-color: rgb(255 255 255 / 90%);;
     height:100%;
+    margin-top: 20px;
     padding-top:20px;
     padding-left:3%;
     font-weight: bold;
@@ -358,5 +361,8 @@ body{
     }
     .card{
         margin-top:10px;
+    }
+    #intro_para{
+        margin-left:2%;
     }
 }

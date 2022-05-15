@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import './ContactUs.css'
 import Bottom from './Bottom'
 import Navbar from './Navbar';
+import Flash from 'react-reveal/Flash';
+import Map from './Map'
 
 export default function ContactUs() {
 
     const [state, setState] = useState('contact');
-
+    
     const showContactForm = () => {
         setState('contact');
     }
@@ -110,56 +112,76 @@ export default function ContactUs() {
             </div>
             <div className='contact_us' style={{ 'display': `${state === 'contact' ? 'block' : 'none'}` }}>
                 <div id="main">
-                    <div className="box">
-                        <h1 className="heading">
-                            Contact Us
-                        </h1>
-                        <hr className="line" />
+                    <Flash>
+                        <div className="box">
+                            <h1 className="heading">
+                                Contact Us
+                            </h1>
+                            <hr className="line" />
 
-                        <p className="contactUsContent">
-                            We can be reached via any of our contact details below, or preferably send us a mail for your convenience using the form below.
-                        </p>
-                        <div className="div">
-                            <i className="fa-solid fa-location-dot" id="contacts_icon"></i>
                             <p className="contactUsContent">
-                                Branch 24, Ladipo Oluwole street, Off Adeniyi Jones, Ikeja, Lagos.
+                                We can be reached via any of our contact details below, or preferably send us a mail for your convenience using the form below.
                             </p>
-                        </div>
-
-                        <div className="div">
-                            <i className="fa-solid fa-mobile-screen" id="contacts_icon"></i>
-                            <p className="contactUsContent">
-                                9999999999,1111111111
-                            </p>
-                        </div>
-
-                        <div className="div">
-                            <i className="fa-solid fa-envelope-open" id="contacts_icon"></i>
-                            <p className="contactUsContent">
-                                email@yahoo.com,
-                            </p>
-                        </div>
-
-                    </div>
-                    <div className="box">
-                        <h1 className="heading">
-                            Support Form
-                        </h1>
-                        <hr className="line" />
-                        <form onSubmit={supportForm}>
-                            <input className="support_input" name="name" onChange={supportFormOnChange} placeholder="Name" type="text" />
-                            <input className="support_input" name="mobileno" onChange={supportFormOnChange} placeholder="Mobile Number" type="text" />
-                            <input className="support_input" name="email" onChange={supportFormOnChange} placeholder="Email" type="text" />
-                            <textarea className="support_input" name="message" onChange={supportFormOnChange} style={{ "resize": "vertical", "height": "100px" }} placeholder="Message" type="text"></textarea>
-                            <div style={{ "width": "100%", "textAlign": "center" }}>
-                                <button id="submit_form" type="submit">
-                                    SUBMIT
-                                </button>
+                            <div className="div">
+                                <i className="fa-solid fa-location-dot" id="contacts_icon"></i>
+                                <p className="contactUsContent">
+                                    SUNTEX CABLE INDUSTRIES
+                                    <br/>
+                                    2227, LANE NO. 06, B.G.J.Colony (Ludhiana,Punjab)
+                                </p>
                             </div>
-                        </form>
-                    </div>
+
+                            <div className="div">
+                                <i className="fa-solid fa-mobile-screen" id="contacts_icon"></i>
+                                <a href="tel:+91 9872802227" style={{textDecoration:"none"}} className="contactUsContent">
+                                <p>
+                                    9872802227
+                                </p>
+                                </a>
+                                <a href="tel:+91 9872402227" style={{textDecoration:"none"}} className="contactUsContent">
+                                <p >
+                                    9872402227
+                                </p>
+                                </a>
+                            </div>
+
+                            <div className="div">
+                                <i className="fa-solid fa-envelope-open" id="contacts_icon"></i>
+                                <a href="mailto:suntexcableind@gmail.com"  className="contactUsContent"style={{textDecoration:"none"}}>
+                                <p >
+                                    suntexcableind@gmail.com
+                                </p>
+                                </a>
+                            </div>
+                        
+                        </div>
+                    </Flash>
+                    <Flash>
+                        <div className="box">
+                            <h1 className="heading">
+                                Support Form
+                            </h1>
+                            <hr className="line" />
+                            <form onSubmit={supportForm}>
+                                <input className="support_input" name="name" onChange={supportFormOnChange} placeholder="Name" type="text" />
+                                <input className="support_input" name="mobileno" onChange={supportFormOnChange} placeholder="Mobile Number" type="text" />
+                                <input className="support_input" name="email" onChange={supportFormOnChange} placeholder="Email" type="text" />
+                                <textarea className="support_input" name="message" onChange={supportFormOnChange} style={{ "resize": "vertical", "height": "100px" }} placeholder="Message" type="text"></textarea>
+                                <div style={{ "width": "100%", "textAlign": "center" }}>
+                                    <button id="submit_form" type="submit">
+                                        SUBMIT
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </Flash>
+                    
                 </div>
+                <Map/>
+                <div id="container"></div>
             </div>
+            
             <div className="dealershipEnquiry" style={{ 'display': `${state === 'dealer' ? 'block' : 'none'}` }}>
 
                 <div id="contactUsIntro" >
@@ -169,6 +191,7 @@ export default function ContactUs() {
                 <div id="form" >
                     <div id="form_section">
                         <form onSubmit={dealerForm}>
+                            
                             <h3 className="form_label">First Name<span className="star_mandatory">*</span></h3>
                             <input name="firstname" onChange={dealerFormOnChange} type="text" className="form_input" id="first_name" required />
 
@@ -247,6 +270,7 @@ export default function ContactUs() {
                         </form>
                     </div>
                     <div id="form_side_bar">
+                        
                         <p id="interested">
                             Interested in becoming a dealer for our products?
                         </p>
@@ -261,4 +285,4 @@ export default function ContactUs() {
             <Bottom />
         </div>
     )
-}   
+}
