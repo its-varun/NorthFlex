@@ -37,14 +37,14 @@ router.post('/createaccount',[
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'garvitchaurasiya2525@gmail.com', // generated ethereal user
-                pass: '6350170845', // generated ethereal password
+                user: 'northflex2002@gmail.com', // generated ethereal user
+                pass: 'northflex@123', // generated ethereal password
             },
         });
         const otp = `${Math.floor(1000 + Math.random() * 9000)}`;
 
         var mailOptions = {
-            from: 'garvitchaurasiya2525@gmail.com', // sender address
+            from: 'northflex2002@gmail.com', // sender address
             to: req.body.email, // list of receivers
             subject: "Verification Code", // Subject line
             text: `${otp}`, // plain text body
@@ -153,14 +153,14 @@ router.post('/resetpasswordotp', async(req, res)=>{
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'garvitchaurasiya2525@gmail.com', // generated ethereal user
-                pass: '6350170845', // generated ethereal password
+                user: 'northflex2002@gmail.com', // generated ethereal user
+                pass: 'northflex@123', // generated ethereal password
             },
         });
         const otp = `${Math.floor(1000 + Math.random() * 9000)}`;
 
         var mailOptions = {
-            from: 'garvitchaurasiya2525@gmail.com', // sender address
+            from: 'northflex2002@gmail.com', // sender address
             to: req.body.email, // list of receivers
             subject: "Reset password verification code", // Subject line
             text: `${otp}`, // plain text body

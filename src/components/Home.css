@@ -5,7 +5,7 @@ body{
     outline:none;
 }
 #nav{
-    width:100%;
+    width:100vw;
     height:100px;
     background-color:white;
     position: fixed;
@@ -20,10 +20,19 @@ body{
     cursor: pointer;
 }
 #navbarNavAltMarkup{
-    margin-left:25%;
+    /* transition: all .3s ease 0s!important; */
+    transition: all 0.5s ease 0s;
+    height: auto;
+    background-color: white;
+    width: 100vw;
+    padding: 20px;
     font-size:21px;
     font-family: calibri;
     font-weight: 600;
+}
+.container-fluid{
+    padding-right: 0;
+    padding-left:0;
 }
 .nav_link{
     color:#001747;
@@ -35,6 +44,7 @@ body{
     color:black;
 }
 #main_photo{
+    padding-top: 100px;
     width:100vw;
     height:auto;
     background-attachment: fixed;
@@ -43,8 +53,6 @@ body{
     background-size: cover;
     display: flex;
     justify-content:center;
-
-   
 }
 
 #intro_para{
@@ -346,11 +354,17 @@ body{
     #quality{
         font-size: 50px;
     }
+    #electrician{
+        /* margin-right:;
+        margin-left:50%; */
+    }
     /* #electrician{
         visibility: hidden;
     } */
     #intro_mid{
-        display:block;
+        display:flex;
+        align-items: center;
+        flex-direction: column;
     }
     .wrapper{
         display: flex;

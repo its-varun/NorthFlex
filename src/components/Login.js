@@ -90,7 +90,7 @@ export default function Login2() {
                       <input type="text" name="email" className="login2_input" value={credentials.email} onChange={onChange} placeholder="Email"/> 
                       <input type="password" name="password" className="login2_input" value={credentials.password} onChange={onChange} placeholder='Password'/>
                       <button className="login2_button" >SIGN IN</button>
-                      <Link to="/sendotp"><p>Forget Password?</p></Link>
+                      <Link to="/sendotp" className="login2_tell"><p > Forget Password?</p></Link>
                       <p className="login2_tell"  onClick={showSignup} >New to NorthFlex? Create Account </p>
                   </form>
                 </div>

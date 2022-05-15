@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
-import { useLocation, Link } from 'react-router-dom';
-import EnterOtp2 from './ResetPasswordOtp';
-
+import Northflex_logo from "../../WebsiteMaterial/images/Northflex_logo.jpg"
 import { useNavigate } from 'react-router-dom'
 
 export default function EnterOtp() {
-  const location = useLocation();
 
   const [emailState, setEmailState] = useState("");
 
@@ -39,10 +36,16 @@ export default function EnterOtp() {
 
 
   return (
-    <div>
-      Enter Email <input type="text" name="otp" onChange={onChange} />
-      <button onClick={handleSubmit}>Send Otp</button>
-      {/* <EnterOtp2 email={emailState} /> */}
+    <>
+    <div id="otp_container">
+      <div id="otp_create">
+        <img src={Northflex_logo} alt=".." id="logo_otp_create"/>
+        <h2 id="otp_heading">Enter Email</h2>
+        <p>Enter your registered Email id</p>
+          <input type="text" name="otp" onChange={onChange}  id="create_input" placeholder='Email Id'/>
+          <button onClick={handleSubmit} id="create_button">Submit</button>
+      </div>
     </div>
+  </>
   )
 }

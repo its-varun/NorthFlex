@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 import { useLocation } from 'react-router-dom';
-
-import {useNavigate} from 'react-router-dom'
+import './EnterOtp.css'
+import {useNavigate} from 'react-router-dom';
+import Northflex_logo from "../WebsiteMaterial/images/Northflex_logo.jpg"
 
 export default function EnterOtp(props) {
     const location = useLocation();
@@ -39,9 +40,16 @@ export default function EnterOtp(props) {
     }
 
   return (
-    <div>
-        Enter OTP <input type="text" name="otp" onChange={onChange} />
-        <button onClick={handleSubmit}>Submit</button>
-    </div>
+    <>
+      <div id="otp_container">
+        <div id="otp_create">
+          <img src={Northflex_logo} alt=".." id="logo_otp_create"/>
+          <h2 id="otp_heading">Verify Email</h2>
+          <p>Sent to your registered Email id</p>
+            <input type="text" name="otp" onChange={onChange}  id="create_input" placeholder='Enter OTP'/>
+            <button onClick={handleSubmit} id="create_button">Submit</button>
+        </div>
+      </div>
+    </>
   )
 }

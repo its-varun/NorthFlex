@@ -1,6 +1,7 @@
 #product_starting{
-    width:100%;
-    height:100vh;
+    padding-top: 100px;
+    width: 100vw;
+    height: auto;
 }
 .askQuery{
     background-color: white;
@@ -135,6 +136,9 @@ table td, table tr, table th{
     border: 1px solid black;
 }
 @media(max-width:956px){
+    table{
+        width: 170px;
+    }
     .products-info{
         position: relative;
         width: 90vw;

@@ -8,7 +8,7 @@ import Bottom from './Bottom'
 import { useInView } from 'react-intersection-observer';
 import Navbar from './Navbar'
 import suntex from '../WebsiteMaterial/images/suntex_industry.png'
-import Bounce from 'react-reveal/Bounce';
+// import Bounce from 'react-reveal/Bounce';
 // import Flip from 'react-reveal/Flip';
 import Pulse from 'react-reveal/Pulse';
 import Fade from 'react-reveal/Fade';
@@ -72,9 +72,9 @@ export default function About(props) {
               What we do ?
             </h1>
             <p className="about_paraa">
-            <Bounce>
+            {/* <Bounce> */}
               SCL Electric India Private Limited was started as Suntex Cable Industries in Ludhiana, Punjab. Over 31 years later, we have expanded to all over Punjab as a highly trusted manufacturer and supplier of conductors, a wide variety of Cables and Conduit PVC Pipes. At NorthFlex, we have been able to excel at what we do because of who we are: relentless innovators who are constantly pushing ourselves to discover, perfect and deliver tomorrow solutions today.
-            </Bounce>
+            {/* </Bounce> */}
             </p>
           </div>
 
@@ -84,15 +84,17 @@ export default function About(props) {
 
             </p>
             <p className='about_paraa'>
-              <Bounce>
+              {/* <Bounce> */}
               Our single-minded focus on innovation that solves real problems takes on several forms. Our focus on consistently optimising efficiency in our manufacturing facilities to ensure better costs for our Customers. Our world-class manufacturing facilities (ISO 9001 and ISO 14001 accredited) and testing Labs. Our emphasis on finding solutions that align with our core values of integrity, honesty and accountability to every customers.
-              </Bounce>
+              {/* </Bounce> */}
             </p>
           </div>
         </div>
-        <Bounce right>
+        {/* <Bounce right> */}
+        <div id="suntexDiv">
         <img src={suntex} id="suntex" alt="..."/>
-        </Bounce>
+        </div>
+        {/* </Bounce> */}
       </div>
 
       {/* <div className="Directors">

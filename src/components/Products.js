@@ -32,7 +32,7 @@ export default function Products() {
             imagename: "4corecopperwire",
             alter: "SilverWire-icon",
             wirename: "FLEXIBLE PVC COPPER WIRE",
-            wirelength: "FLEXIBLE PVC COPPER WIRE (Length 90m)",
+            wirelength: "FLEXIBLE PVC COPPER WIRE AVAILABLE IN 2 CORE, 3 CORE, 4 CORE (Length 90m)",
 
             specifications: [
                 { wirethickness: "0.75", NosAndDiameter: "11/0.3 (240.2)", currentrating: "7" },
@@ -216,7 +216,7 @@ export default function Products() {
                     <div className="product">
                         <div>
                         <p>Pipes</p>
-                        <p>CPVC PIPES</p>
+                        <p>CONDUIT PIPES</p>
                         <table>
                             <tbody>
                             <tr>

@@ -108,6 +108,10 @@
     margin-right: 50px;
     color:red;
 }
+.login2_tell{
+    color:black;
+    text-decoration: none;
+}
 .login2_tell:hover{
     color:red;
     cursor:pointer;
