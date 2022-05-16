@@ -129,8 +129,12 @@
     }
     #login2_login{
         display: block;
+        width:95%;
+        margin-left:3%;
     }
     #login2_signup{
+        width:95%;
         display: block;
+        margin-left:3%;
     }
 }
