@@ -72,9 +72,9 @@ export default function Products() {
             wirelength: "PVC Copper Wire 1 Core (Length 90m)",
 
             specifications: [
-                {wiresize: "RG-59"},
-                {wiresize: "GR-6"},
-                {wiresize: "RG-11"},
+                { wiresize: "RG-59" },
+                { wiresize: "GR-6" },
+                { wiresize: "RG-11" },
             ],
 
         },
@@ -152,21 +152,21 @@ export default function Products() {
     return (
         <>
             <Navbar />
-            <img src={factory_inside} alt="..." id="product_starting"/>
-            <div className="productContainer">
-            <div className='askQuery'>
-                <h3>Product Range</h3>
-                <ul>
-                    <li>Single Core Copper Wire</li>
-                    <li>Fexible PVC Copper Wire</li>
-                    <li>Submersible Cable</li>
-                    <li>Dish Co-Axial Cable</li>
-                    <li>PVC Insulated Un-Sheathed Copper Wire</li>
-                    <li>Pipes</li>
-                </ul>
-                <p className='prices'>As prices change frequently. To know more about prices contact us:</p>
-                <button className='askQueryButton'>Ask Query</button>
-            </div>
+            <img src={factory_inside} alt="..." id="product_starting" />
+            <div className="productContainer" id="productContainer">
+                <div className='askQuery'>
+                    <h3>Product Range</h3>
+                    <ul>
+                        <li>Single Core Copper Wire</li>
+                        <li>Fexible PVC Copper Wire</li>
+                        <li>Submersible Cable</li>
+                        <li>Dish Co-Axial Cable</li>
+                        <li>PVC Insulated Un-Sheathed Copper Wire</li>
+                        <li>Pipes</li>
+                    </ul>
+                    <p className='prices'>As prices change frequently. To know more about prices contact us:</p>
+                    <a href="/contactus"><button className='askQueryButton'>Ask Query</button></a>
+                </div>
                 <div className="products-info">
                     {
                         Products.map((product, index) => {
@@ -195,19 +195,19 @@ export default function Products() {
                                                 </div>
                                             </div>
                                         </div>
-                                        {(Products[productindex].specifications[state[productindex].value].wirethickness)?<p><i className="fa-solid fa-caret-right"></i>Wire thickness: 
-                                        <button type="button" className="changeWireThickness" data-toggle="modal" data-target={`#exampleModalCenter${productindex}`}>
-                                            <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].wirethickness}</span>
-                                            <i className="fa-solid fa-caret-down"></i>
-                                        </button>
-                                        </p>:""}
-                                        {(Products[productindex].specifications[state[productindex].value].NosAndDiameter)?<p><i className="fa-solid fa-caret-right"></i>Nos & Diameter: <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].NosAndDiameter}</span></p>:""}
-                                        {(Products[productindex].specifications[state[productindex].value].currentrating)?<p><i className="fa-solid fa-caret-right"></i>Current Rating: <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].currentrating}</span></p>:""}
-                                        {(Products[productindex].specifications[state[productindex].value].wiresize)? <p><i className="fa-solid fa-caret-right"></i>Size: <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].wiresize}</span></p>:""}
-                                        
+                                        {(Products[productindex].specifications[state[productindex].value].wirethickness) ? <p><i className="fa-solid fa-caret-right"></i>Wire thickness:
+                                            <button type="button" className="changeWireThickness" data-toggle="modal" data-target={`#exampleModalCenter${productindex}`}>
+                                                <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].wirethickness}</span>
+                                                <i className="fa-solid fa-caret-down"></i>
+                                            </button>
+                                        </p> : ""}
+                                        {(Products[productindex].specifications[state[productindex].value].NosAndDiameter) ? <p><i className="fa-solid fa-caret-right"></i>Nos & Diameter: <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].NosAndDiameter}</span></p> : ""}
+                                        {(Products[productindex].specifications[state[productindex].value].currentrating) ? <p><i className="fa-solid fa-caret-right"></i>Current Rating: <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].currentrating}</span></p> : ""}
+                                        {(Products[productindex].specifications[state[productindex].value].wiresize) ? <p><i className="fa-solid fa-caret-right"></i>Size: <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].wiresize}</span></p> : ""}
+
 
                                     </div>
-                                    <img src={img} alt={product.alter} height="200px" image-resolution="3000dpi"/>
+                                    <img src={img} alt={product.alter} height="200px" image-resolution="3000dpi" />
 
                                 </div>
                             )
@@ -215,39 +215,39 @@ export default function Products() {
                     }
                     <div className="product">
                         <div>
-                        <p>Pipes</p>
-                        <p>CONDUIT PIPES</p>
-                        <table>
-                            <tbody>
-                            <tr>
-                                <th>Size (mm)</th>
-                                <th>Size (inch)</th>
-                            </tr>
-                            <tr>
-                                <td>20</td>
-                                <td>3/4</td>
-                            </tr>
-                            <tr>
-                                <td>25</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td>32</td>
-                                <td>1 1/4</td>
-                            </tr>
-                            <tr>
-                                <td>40</td>
-                                <td>1 1/2</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        
+                            <p>Pipes</p>
+                            <p>CONDUIT PIPES</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>Size (mm)</th>
+                                        <th>Size (inch)</th>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>3/4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>32</td>
+                                        <td>1 1/4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>40</td>
+                                        <td>1 1/2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
                         </div>
-                        <img src={cpvcpipes}  height="200px" alt="..." />
+                        <img src={cpvcpipes} height="200px" alt="..." />
                     </div>
                 </div>
             </div>
-            <Bottom/>
+            <Bottom />
         </>
     )
 }
