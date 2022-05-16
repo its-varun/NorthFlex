@@ -72,9 +72,9 @@ export default function About(props) {
               What we do ?
             </h1>
             <p className="about_paraa">
-            {/* <Bounce> */}
+            <Pulse>
               SCL Electric India Private Limited was started as Suntex Cable Industries in Ludhiana, Punjab. Over 31 years later, we have expanded to all over Punjab as a highly trusted manufacturer and supplier of conductors, a wide variety of Cables and Conduit PVC Pipes. At NorthFlex, we have been able to excel at what we do because of who we are: relentless innovators who are constantly pushing ourselves to discover, perfect and deliver tomorrow solutions today.
-            {/* </Bounce> */}
+            </Pulse>
             </p>
           </div>
 
@@ -84,9 +84,9 @@ export default function About(props) {
 
             </p>
             <p className='about_paraa'>
-              {/* <Bounce> */}
+              <Pulse>
               Our single-minded focus on innovation that solves real problems takes on several forms. Our focus on consistently optimising efficiency in our manufacturing facilities to ensure better costs for our Customers. Our world-class manufacturing facilities (ISO 9001 and ISO 14001 accredited) and testing Labs. Our emphasis on finding solutions that align with our core values of integrity, honesty and accountability to every customers.
-              {/* </Bounce> */}
+              </Pulse>
             </p>
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function About(props) {
         <div id="suntexDiv">
         <img src={suntex} id="suntex" alt="..."/>
         </div>
-        {/* </Bounce> */}
+        {/* </Pulse> */}
       </div>
 
       {/* <div className="Directors">

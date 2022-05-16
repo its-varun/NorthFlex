@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Northflex_logo from "../WebsiteMaterial/images/Northflex_logo.jpg"
-
 import { Link } from 'react-router-dom'
+
 export default function Navbar() {
 	const [isLoggedin, setIsLoggedin] = useState(localStorage.getItem('token'))
 	const handleLogout = ()=>{
@@ -17,12 +17,12 @@ export default function Navbar() {
 	    </button>
 	    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
 	      <div className="navbar-nav">
-	        <a className="nav_link" href="/">HOME</a>
-	        <a className="nav_link" href="/about">ABOUT US</a>
-	        <a className="nav_link" href="/products">OUR PRODUCTS</a>
-	        {/* <a className="nav_link" href="/contactus">SUPPORT</a> */}
-	        <a className="nav_link" href="/contactus">CONTACT US</a>
-			{/* <a href="/contactus">About2</a> */}
+	        <Link className="nav_link" to="/">HOME</Link>
+	        <Link className="nav_link" to="/about">ABOUT US</Link>
+	        <Link className="nav_link" to="/products">OUR PRODUCTS</Link>
+	        {/* <Link className="nav_link" to="/contactus">SUPPORT</Link> */}
+	        <Link className="nav_link" to="/contactus">CONTACT US</Link>
+			{/* <Link to="/contactus">About2</Link> */}
 	        {isLoggedin?<Link onClick={handleLogout} className="nav_link" to="#">LOGOUT</Link>:<Link className="nav_link" to="/login">LOGIN</Link>}
 	      </div>
 	    </div>
