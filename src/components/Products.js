@@ -4,17 +4,18 @@ import './Products.css';
 import cpvcpipes from '../WebsiteMaterial/images/cpvcpipes.jpg'
 import Bottom from './Bottom'
 import factory_inside from '../WebsiteMaterial/images/factory_inside.png'
+import HeadShake from 'react-reveal/HeadShake';
 export default function Products() {
 
     const Products = [
         {
             imagename: "CopperWire",
             alter: "CopperWire-icon",
-            wirename: "SINGLE CORE PVC COPPER WIRE",
-            wirelength: "PVC Copper Wire 1 Core (Length 90m)",
+            wirename: "MULTISTAND SINGLE CORE PVC COPPER WIRE",
+            wirelength: "In House wiring upto 6mm in Box Packing(90Mtrs) & in (180Mtrs). From 10mm or above only in Roll Packing (90Mtrs) & in (180Mtrs)",
 
             specifications: [
-                { wirethickness: "0.75", NosAndDiameter: "11/0.3 (240.2)", currentrating: "7" },
+                { wirethickness: "0.75", NosAndDiameter: "11/0.3 (24/0.2)", currentrating: "7" },
                 { wirethickness: "1.00", NosAndDiameter: "14/0.3", currentrating: "11" },
                 { wirethickness: "1.50", NosAndDiameter: "22/0.3", currentrating: "13" },
                 { wirethickness: "2.50", NosAndDiameter: "36/0.3", currentrating: "18" },
@@ -32,10 +33,10 @@ export default function Products() {
             imagename: "4corecopperwire",
             alter: "SilverWire-icon",
             wirename: "FLEXIBLE PVC COPPER WIRE",
-            wirelength: "FLEXIBLE PVC COPPER WIRE AVAILABLE IN 2 CORE, 3 CORE, 4 CORE (Length 90m)",
+            wirelength: "AVAILABLE IN 2 CORE, 3 CORE, 4 CORE (Length 90m)",
 
             specifications: [
-                { wirethickness: "0.75", NosAndDiameter: "11/0.3 (240.2)", currentrating: "7" },
+                { wirethickness: "0.75", NosAndDiameter: "11/0.3 (24/0.2)", currentrating: "7" },
                 { wirethickness: "1.00", NosAndDiameter: "14/0.3", currentrating: "11" },
                 { wirethickness: "1.50", NosAndDiameter: "22/0.3", currentrating: "14" },
                 { wirethickness: "2.50", NosAndDiameter: "36/0.3", currentrating: "19" },
@@ -52,7 +53,7 @@ export default function Products() {
             imagename: "submersiblecable",
             alter: "CopperWire-icon",
             wirename: "SUBMERSIBLE CABLES",
-            wirelength: "PVC Copper Wire 1 Core (Length 90m)",
+            wirelength: "(Length 90m)",
 
             specifications: [
                 { wirethickness: "1.50", NosAndDiameter: "22/0.3", currentrating: "14" },
@@ -69,7 +70,7 @@ export default function Products() {
             imagename: "dishcable",
             alter: "CopperWire-icon",
             wirename: "DISH CO-AXIAL CABLE",
-            wirelength: "PVC Copper Wire 1 Core (Length 90m)",
+            wirelength: "(Length 90m)",
 
             specifications: [
                 { wiresize: "RG-59" },
@@ -81,8 +82,8 @@ export default function Products() {
         {
             imagename: "pvcinsulatedtwincable",
             alter: "CopperWire-icon",
-            wirename: "PVC INSULATED TWIN CABLE",
-            wirelength: "PVC Copper Wire 1 Core (Length 90m)",
+            wirename: "PVC INSULATED ALUMINIUM TWIN CABLE",
+            wirelength: "(Length 90m)",
 
             specifications: [
                 { wirethickness: "2.50", NosAndDiameter: "1/1.78" },
@@ -98,7 +99,7 @@ export default function Products() {
             imagename: "CopperWire",
             alter: "CopperWire-icon",
             wirename: "PVC INSULATED UN-SHEATHED COPPER WIRE",
-            wirelength: "PVC Copper Wire 1 Core (Length 90m)",
+            wirelength: "(Length 90m)",
 
             specifications: [
                 { wirethickness: "1.50", NosAndDiameter: "22/0.3" },
@@ -154,6 +155,7 @@ export default function Products() {
             <Navbar />
             <img src={factory_inside} alt="..." id="product_starting" />
             <div className="productContainer" id="productContainer">
+            <HeadShake>
                 <div className='askQuery'>
                     <h3>Product Range</h3>
                     <ul>
@@ -167,6 +169,7 @@ export default function Products() {
                     <p className='prices'>As prices change frequently. To know more about prices contact us:</p>
                     <a href="/contactus"><button className='askQueryButton'>Ask Query</button></a>
                 </div>
+                </HeadShake>
                 <div className="products-info">
                     {
                         Products.map((product, index) => {

@@ -275,7 +275,7 @@ export default function ContactUs() {
                             Interested in becoming a dealer for our products?
                         </p>
                         <p id="interested_para">
-                            Thank you for your interest in PMI Products! Are you interested in learning more about the Stanley or Aladdin brands or becoming a dealer? Fill out the form and one of our sales team will contact you with more information.
+                            Thank you for your interest in NorthFlex Products! Fill out the form and one of our sales team will contact you with more information.
                         </p>
 
                     </div>

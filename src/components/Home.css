@@ -149,7 +149,7 @@ body{
     position: relative;
     z-index: 3;
     color:#fff;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(30px);
     transition: 0.5s all;
 
@@ -165,10 +165,10 @@ body{
     text-decoration: none;
 }
 
-.card:hover .info1{
+/* .card:hover .info1{
     opacity: 1;
     transform: translateY(0px);
-}
+} */
 #different_use{
     height:100%;
     width:100%;
@@ -385,5 +385,14 @@ body{
     }
     .navbar-nav{
             position: static;
+    }
+}
+
+@media screen and (max-width: 400px){
+    #electrician{
+        height:300px;
+    }
+    #line_northflex{
+        width:73%;
     }
 }

@@ -20,11 +20,20 @@ export default function Bottom() {
                         Dealership  Inquiry
                     </button>
                 </Link>
-                <Link to="tel:+91 9872802227" style={{textDecoration:"none"}}>
-                <h3 className='info' style={{marginTop:"35px",textDecoration:"none"}}>
-                    +91 9872802227
-                </h3>
-                </Link>
+                <div style={{display:"flex",marginBottom:"-7px"}}>
+                    <Link to="tel:+91 9872802227" style={{textDecoration:"none"}}>
+                    <h3 className='info' style={{marginTop:"35px",textDecoration:"none"}}>
+                        9872802227 
+                    </h3>
+                    </Link>
+
+                    <Link to="tel:+91 9872402227" style={{textDecoration:"none"}}>
+                    <h3 className='info' style={{marginTop:"35px",textDecoration:"none"}}>
+                        ,9872402227
+                    </h3>
+                    </Link>
+                </div>
+
                 <Link to="mailto:suntexcableind@gmail.com"  style={{textDecoration:"none"}}>
                     <h3 className='info'  style={{textDecoration:"none"}}>
                         suntexcableind@gmail.com

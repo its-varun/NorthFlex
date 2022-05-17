@@ -59,10 +59,12 @@ export default function Home() {
 							<div className="card">
 								<img src={housewire} alt="..." className='wires'/>
 								<div className="info1">
+								<Fade bottom>
 									<h1 className='heading_para'>House &nbsp; &nbsp; &nbsp; &nbsp; Wires</h1>
 									<h6 className='paragraph_products'> 
 									For internal electrification and power supply to all electrical connected equipment
 									</h6>
+								</Fade>
 								</div>
 							</div>
 						</Link>
@@ -72,10 +74,12 @@ export default function Home() {
 						<div className="card">
 							<img src={dishcable1} alt="..." />
 							<div className="info1">
+							<Fade bottom>
 								<h1 className='heading_para'>Agriculture Wires</h1>
 								<h6 className='paragraph_products'> 
-								For internal & external electrification and power supply for a wide range of applications in Commercial
+								For internal & external electrification and power supply for a wide range of applications in Agriculture
 								</h6>
+							</Fade>
 							</div>
 
 						</div>
@@ -86,10 +90,12 @@ export default function Home() {
 							<div className="card">
 								<img src={industrialwires} alt="..." />
 								<div className="info1">
+								<Fade bottom>
 									<h1 className='heading_para'>Industrial &nbsp; Wires</h1>
 									<h6 className='paragraph_products'> 
 									For internal & external electrification and power supply for a wide range of applications in industries
 									</h6>
+								</Fade>
 								</div>
 
 							</div>

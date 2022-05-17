@@ -158,11 +158,11 @@ export default function About(props) {
           <img src={owner} alt='' id="owner"/>
           <div>
             <p>
-              Late Mr. Lorem<br />
+              Late Mr. Krishan Chand Gupta<br />
               Founder
             </p>
             <p>
-              Mr. Lorem was the founder of this company. whatever we have achieved in this journey, credit goes to him. If he was with us, we would have touched more heights.
+              Mr. Krishan was the founder of this company. whatever we have achieved in this journey, credit goes to him. If he was with us, we would have touched more heights.
             </p>
           </div>
         </div>
