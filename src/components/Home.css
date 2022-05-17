@@ -388,11 +388,17 @@ body{
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
     #electrician{
         height:300px;
     }
     #line_northflex{
         width:73%;
+    }
+    .paragraph_products{
+        font-size:22px;
+    }
+    .heading_para{
+        font-size:30px;
     }
 }

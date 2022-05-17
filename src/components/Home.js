@@ -60,7 +60,7 @@ export default function Home() {
 								<img src={housewire} alt="..." className='wires'/>
 								<div className="info1">
 								<Fade bottom>
-									<h1 className='heading_para'>House &nbsp; &nbsp; &nbsp; &nbsp; Wires</h1>
+									<h1 className='heading_para'>House Wires</h1>
 									<h6 className='paragraph_products'> 
 									For internal electrification and power supply to all electrical connected equipment
 									</h6>
