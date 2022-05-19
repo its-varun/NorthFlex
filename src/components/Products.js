@@ -10,7 +10,7 @@ export default function Products() {
     const Products = [
         {
             imagename: "CopperWire",
-            alter: "CopperWire-icon",
+            alter: "icon",
             wirename: "MULTISTAND SINGLE CORE PVC COPPER WIRE",
             wirelength: "In House wiring upto 6mm in Box Packing(90Mtrs) & in (180Mtrs). From 10mm or above only in Roll Packing (90Mtrs) & in (180Mtrs)",
 
@@ -51,7 +51,7 @@ export default function Products() {
         },
         {
             imagename: "submersiblecable",
-            alter: "CopperWire-icon",
+            alter: "icon",
             wirename: "SUBMERSIBLE CABLES",
             wirelength: "(Length 90m)",
 
@@ -68,7 +68,7 @@ export default function Products() {
         },
         {
             imagename: "dishcable",
-            alter: "CopperWire-icon",
+            alter: "icon",
             wirename: "DISH CO-AXIAL CABLE",
             wirelength: "(Length 90m)",
 
@@ -81,7 +81,7 @@ export default function Products() {
         },
         {
             imagename: "pvcinsulatedtwincable",
-            alter: "CopperWire-icon",
+            alter: "icon",
             wirename: "PVC INSULATED ALUMINIUM TWIN CABLE",
             wirelength: "(Length 90m)",
 
@@ -97,7 +97,7 @@ export default function Products() {
         },
         {
             imagename: "CopperWire",
-            alter: "CopperWire-icon",
+            alter: "icon",
             wirename: "PVC INSULATED UN-SHEATHED COPPER WIRE",
             wirelength: "(Length 90m)",
 
@@ -155,20 +155,20 @@ export default function Products() {
             <Navbar />
             <img src={factory_inside} alt="..." id="product_starting" />
             <div className="productContainer" id="productContainer">
-            <HeadShake>
-                <div className='askQuery'>
-                    <h3>Product Range</h3>
-                    <ul>
-                        <li>Single Core Copper Wire</li>
-                        <li>Fexible PVC Copper Wire</li>
-                        <li>Submersible Cable</li>
-                        <li>Dish Co-Axial Cable</li>
-                        <li>PVC Insulated Un-Sheathed Copper Wire</li>
-                        <li>Pipes</li>
-                    </ul>
-                    <p className='prices'>As prices change frequently. To know more about prices contact us:</p>
-                    <a href="/contactus"><button className='askQueryButton'>Ask Query</button></a>
-                </div>
+                <HeadShake>
+                    <div className='askQuery'>
+                        <h3>Product Range</h3>
+                        <ul>
+                            <li>Single Core Copper Wire</li>
+                            <li>Fexible PVC Copper Wire</li>
+                            <li>Submersible Cable</li>
+                            <li>Dish Co-Axial Cable</li>
+                            <li>PVC Insulated Un-Sheathed Copper Wire</li>
+                            <li>Pipes</li>
+                        </ul>
+                        <p className='prices'>As prices change frequently. To know more about prices contact us:</p>
+                        <a href="/contactus"><button className='askQueryButton'>Ask Query</button></a>
+                    </div>
                 </HeadShake>
                 <div className="products-info">
                     {
@@ -179,34 +179,53 @@ export default function Products() {
                             return (
                                 <div key={index} className="product">
                                     <div>
-                                        {/* <p>{product.category}</p> */}
-                                        {/* <p>{product.name}</p> */}
                                         <p>{product.wirename}</p>
                                         <p>{product.wirelength}</p>
 
-                                        <div className="modal fade" id={`exampleModalCenter${index}`} tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div className="modal fade" id={`wirethicknessModal${index}`} tabIndex="-1" role="dialog" aria-labelledby="wirethicknessModalTitle" aria-hidden="true">
                                             <div className="modal-dialog modal-dialog-centered" role="document">
                                                 <div className="modal-content">
                                                     <div className="modal-body">
                                                         {
                                                             product.specifications.map((specification, index) => {
-                                                                // return <button key={index} onClick={() => { onClickHandle(productindex, index) }} >{specification.wirethickness}</button>;
-                                                                return <div className='modalOptions' key={index} onClick={() => { onClickHandle(productindex, index) }} >{specification.wirethickness}</div>;
+                                                                return <button type="button" className='modalOptions' data-dismiss="modal" key={index} onClick={() => { onClickHandle(productindex, index) }} >{specification.wirethickness}</button>;
                                                             })
                                                         }
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        {(Products[productindex].specifications[state[productindex].value].wirethickness) ? <p><i className="fa-solid fa-caret-right"></i>Wire thickness:
-                                            <button type="button" className="changeWireThickness" data-toggle="modal" data-target={`#exampleModalCenter${productindex}`}>
+                                        <div className="modal fade" id={`exampleModalCenter${index}`} tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div className="modal-dialog modal-dialog-centered" role="document">
+                                                <div className="modal-content">
+                                                    <div className="modal-body">
+                                                        {
+                                                            product.specifications.map((specification, index) => {
+                                                                return <button type="button" className='modalOptions' data-dismiss="modal" key={index} onClick={() => { onClickHandle(productindex, index) }} >{specification.wiresize}</button>;
+                                                            })
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {(Products[productindex].specifications[state[productindex].value].wirethickness) ? <p><i className="fa-solid fa-caret-right"></i>Wire thickness: 
+                                            <button type="button" className="changeWireThickness" data-toggle="modal" data-target={`#wirethicknessModal${productindex}`}>
                                                 <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].wirethickness}</span>
                                                 <i className="fa-solid fa-caret-down"></i>
                                             </button>
                                         </p> : ""}
                                         {(Products[productindex].specifications[state[productindex].value].NosAndDiameter) ? <p><i className="fa-solid fa-caret-right"></i>Nos & Diameter: <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].NosAndDiameter}</span></p> : ""}
                                         {(Products[productindex].specifications[state[productindex].value].currentrating) ? <p><i className="fa-solid fa-caret-right"></i>Current Rating: <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].currentrating}</span></p> : ""}
-                                        {(Products[productindex].specifications[state[productindex].value].wiresize) ? <p><i className="fa-solid fa-caret-right"></i>Size: <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].wiresize}</span></p> : ""}
+
+                                        {(Products[productindex].specifications[state[productindex].value].wiresize) ?
+                                        <div style={{"marginBottom":"20px"}}><i className="fa-solid fa-caret-right"></i>
+                                            Size:
+                                            <button style={{"fontSize":"13px"}} type="button" className="changeWireThickness" data-toggle="modal" data-target={`#exampleModalCenter${productindex}`}>
+                                                <span className='specificationsValue'>{Products[productindex].specifications[state[productindex].value].wiresize}</span>
+                                                <i className="fa-solid fa-caret-down"></i>
+                                            </button>
+                                        </div> : ""}
 
 
                                     </div>
